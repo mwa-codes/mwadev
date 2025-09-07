@@ -1,36 +1,173 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# mwadev.me - Always Developing
 
-## Getting Started
+> A personal website that grows with me from student → builder → freelancer → professional developer
 
-First, run the development server:
+![mwadev.me](https://img.shields.io/badge/status-in%20development-blue)
+![Next.js](https://img.shields.io/badge/Next.js-15.5.2-black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-cyan)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Overview
+
+**mwadev.me** is my personal brand and development journey website. It's designed to evolve with me as I progress through different phases of my career:
+
+- **Student Phase**: Learning blog, notes, and experiments
+- **Builder Phase**: Portfolio projects and technical showcases  
+- **Freelancer Phase**: Services, case studies, client testimonials
+- **Professional Phase**: SaaS experiments, team leadership, mentoring
+
+## ✨ Features
+
+### 🎨 Design & UX
+- Clean, modern design with futuristic touches
+- Mobile-first responsive layout
+- Dark/light mode toggle with system preference detection
+- Smooth animations with Framer Motion
+- Custom blob animations and micro-interactions
+
+### 🧭 Navigation & Sections
+- **Hero Section**: Personal introduction with current status
+- **Journey Timeline**: Interactive roadmap of career progression
+- **Projects Showcase**: Filterable portfolio with live demos
+- **Learning Blog**: Technical articles and learning notes
+- **Contact Form**: Functional contact with database storage
+
+### 🛠 Technical Stack
+- **Frontend**: Next.js 15 + TypeScript + Tailwind CSS
+- **Animations**: Framer Motion for smooth interactions
+- **Database**: Prisma ORM + PostgreSQL (Vercel Postgres)
+- **Hosting**: Vercel with automatic deployments
+- **Icons**: Lucide React for consistent iconography
+
+## 🏗 Architecture
+
+### Modular Component Structure
+```
+src/
+├── app/                 # Next.js App Router
+├── components/
+│   ├── layout/         # Header, Footer, Navigation
+│   ├── sections/       # Page sections (Hero, Projects, etc.)
+│   └── ui/             # Reusable UI components
+├── lib/                # Utilities (theme, database, etc.)
+└── types/              # TypeScript type definitions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Database Schema
+- **BlogPost**: Articles and learning notes
+- **Project**: Portfolio items with tags and status
+- **Contact**: Form submissions and inquiries
+- **Newsletter**: Email subscribers
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚦 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+- PostgreSQL database (optional for development)
 
-## Learn More
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/muhammed-waqar/mwadev.git
+cd mwadev
 
-To learn more about Next.js, take a look at the following resources:
+# Install dependencies
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Set up environment variables
+cp .env.example .env.local
+# Edit .env.local with your database URL
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Set up database (optional)
+npx prisma db push
 
-## Deploy on Vercel
+# Start development server
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Visit `http://localhost:3000` to see the site.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎯 Current Status
+
+### ✅ Completed
+- [x] Responsive website structure
+- [x] Dark/light theme toggle
+- [x] Hero section with personal branding
+- [x] Interactive journey timeline
+- [x] Project showcase with filters
+- [x] Blog section layout
+- [x] Functional contact form
+- [x] Database schema design
+- [x] API routes for contact handling
+
+### 🚧 In Progress
+- [ ] Content management system
+- [ ] Blog post creation workflow
+- [ ] Project detail pages
+- [ ] Email notifications
+- [ ] Analytics integration
+
+### 📋 Planned
+- [ ] Admin dashboard
+- [ ] Newsletter integration
+- [ ] Advanced search
+- [ ] Performance optimizations
+- [ ] SEO enhancements
+
+## 🛣 Roadmap
+
+### Phase 1: Foundation (Current)
+Focus on core website functionality and content structure.
+
+### Phase 2: Content Creation
+Add real projects, write technical blog posts, refine design.
+
+### Phase 3: Growth Features
+Add analytics, newsletter, admin panel, and advanced integrations.
+
+### Phase 4: Professional Platform
+Services pages, client portal, advanced project management.
+
+## 📊 Tech Highlights
+
+### Performance
+- Static generation where possible
+- Image optimization with Next.js
+- Minimal JavaScript bundle
+- Efficient CSS with Tailwind
+
+### Accessibility
+- Semantic HTML structure
+- Keyboard navigation support
+- Screen reader friendly
+- WCAG 2.1 compliance focus
+
+### SEO
+- Meta tags and Open Graph
+- Structured data markup
+- Sitemap generation
+- Fast loading times
+
+## 🤝 Contributing
+
+This is a personal project, but I welcome:
+- Bug reports and suggestions
+- Code review and feedback
+- Ideas for new features
+- Design improvements
+
+## 📝 License
+
+This project is open source under the MIT License. Feel free to use it as inspiration for your own personal website!
+
+## 🔗 Links
+
+- **Live Site**: [mwadev.me](https://mwadev.me) *(coming soon)*
+- **GitHub**: [github.com/muhammed-waqar](https://github.com/muhammed-waqar)
+- **LinkedIn**: [linkedin.com/in/muhammed-waqar](https://linkedin.com/in/muhammed-waqar)
+- **Email**: [muhammed@mwadev.me](mailto:muhammed@mwadev.me)
+
+---
+
+**Always Learning, Always Building** 🚀

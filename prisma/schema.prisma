@@ -1,0 +1,68 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model BlogPost {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  excerpt     String
+  content     String
+  published   Boolean  @default(false)
+  featured    Boolean  @default(false)
+  tags        String[]
+  category    String
+  readTime    String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("blog_posts")
+}
+
+model Contact {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  status    String   @default("new") // new, read, replied
+  createdAt DateTime @default(now())
+
+  @@map("contacts")
+}
+
+model Newsletter {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+
+  @@map("newsletter_subscribers")
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  image       String?
+  tags        String[]
+  category    String
+  status      String   // live, in-development, planned, concept
+  githubUrl   String?
+  demoUrl     String?
+  features    String[]
+  featured    Boolean  @default(false)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("projects")
+}
