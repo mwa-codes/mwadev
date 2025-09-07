@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { supabaseAdmin } from '@/lib/supabase';
+import { sendContactNotification } from '@/lib/email';
 
 // Contact form validation schema
 const contactSchema = z.object({
@@ -52,8 +53,12 @@ export async function POST(request: NextRequest) {
 
         console.log('Contact form saved successfully:', data);
 
-        // TODO: Send email notification
-        // await sendEmailNotification(validatedData);
+        // Send email notification
+        const emailResult = await sendContactNotification(validatedData);
+        if (emailResult.error) {
+            console.warn('Failed to send email notification:', emailResult.error);
+            // Continue without failing the request - the form data is still saved
+        }
 
         return NextResponse.json(
             { message: 'Thank you for your message! I\'ll get back to you soon.' },
