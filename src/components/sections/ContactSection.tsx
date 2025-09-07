@@ -55,25 +55,25 @@ const ContactSection = () => {
         {
             name: "GitHub",
             icon: Github,
-            href: "https://github.com/muhammed-waqar",
+            href: "https://github.com/mwa-ch",
             description: "Check out my code and projects"
         },
         {
             name: "LinkedIn",
             icon: Linkedin,
-            href: "https://linkedin.com/in/muhammed-waqar",
+            href: "https://www.linkedin.com/in/mwaqarahmed/",
             description: "Connect with me professionally"
         },
         {
             name: "Twitter",
             icon: Twitter,
-            href: "https://twitter.com/muhammed_waqar",
+            href: "#",
             description: "Follow my development journey"
         },
         {
             name: "Email",
             icon: Mail,
-            href: "mailto:muhammed@mwadev.me",
+            href: "mailto:m.waqar.ahmed@gmail.com",
             description: "Send me a direct message"
         }
     ];
@@ -201,8 +201,8 @@ const ContactSection = () => {
                                 type="submit"
                                 disabled={isSubmitting}
                                 className={`w-full flex items-center justify-center px-6 py-3 rounded-lg font-semibold shadow-lg transition-all duration-300 ${isSubmitting
-                                        ? 'bg-gray-400 cursor-not-allowed'
-                                        : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:shadow-xl'
+                                    ? 'bg-gray-400 cursor-not-allowed'
+                                    : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:shadow-xl'
                                     } text-white`}
                             >
                                 <Send size={20} className="mr-2" />
@@ -215,8 +215,8 @@ const ContactSection = () => {
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     className={`mt-4 p-4 rounded-lg ${submitMessage.includes('Thank you')
-                                            ? 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-200'
-                                            : 'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-200'
+                                        ? 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-200'
+                                        : 'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-200'
                                         }`}
                                 >
                                     {submitMessage}
@@ -245,7 +245,7 @@ const ContactSection = () => {
                                     </div>
                                     <div className="ml-4">
                                         <p className="text-sm font-medium text-gray-900 dark:text-white">Email</p>
-                                        <p className="text-sm text-gray-600 dark:text-gray-300">muhammed@mwadev.me</p>
+                                        <p className="text-sm text-gray-600 dark:text-gray-300">m.waqar.ahmed@gmail.com</p>
                                     </div>
                                 </div>
 

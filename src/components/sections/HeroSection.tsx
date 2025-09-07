@@ -49,13 +49,13 @@ const HeroSection = () => {
                     {/* Main Heading */}
                     <motion.div variants={itemVariants} className="space-y-4">
                         <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white">
-                            Muhammed
+                            Muhammed Waqar
                             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                                {" "}Waqar
+                                {" "}Ahmed
                             </span>
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-medium">
-                            Always Learning, Always Building
+                            Learning, building, and evolving — in code and in life
                         </p>
                     </motion.div>
 
@@ -64,13 +64,11 @@ const HeroSection = () => {
                         <div className="inline-flex items-center px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full">
                             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse mr-2"></div>
                             <span className="text-blue-800 dark:text-blue-300 font-medium">
-                                Currently in Student Phase - Building & Learning
+                                Currently Active in All Phases - Learning, Building & Growing
                             </span>
                         </div>
                         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                            A passionate developer on a journey from student to professional,
-                            experimenting with AI, IoT, and full-stack development.
-                            This site grows with me as I evolve.
+                            Entrepreneur, student, freelancer, and family person - thriving in multiple roles while building meaningful solutions and relationships.
                         </p>
                     </motion.div>
 
@@ -97,9 +95,9 @@ const HeroSection = () => {
                     {/* Social Links */}
                     <motion.div variants={itemVariants} className="flex justify-center space-x-6">
                         {[
-                            { icon: Github, href: "#", label: "GitHub" },
-                            { icon: Linkedin, href: "#", label: "LinkedIn" },
-                            { icon: Mail, href: "#", label: "Email" },
+                            { icon: Github, href: "https://github.com/mwa-ch", label: "GitHub" },
+                            { icon: Linkedin, href: "https://www.linkedin.com/in/mwaqarahmed/", label: "LinkedIn" },
+                            { icon: Mail, href: "mailto:m.waqar.ahmed@gmail.com", label: "Email" },
                         ].map(({ icon: Icon, href, label }) => (
                             <motion.a
                                 key={label}
@@ -116,7 +114,7 @@ const HeroSection = () => {
                     {/* Scroll Indicator */}
                     <motion.div
                         variants={itemVariants}
-                        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+                        className="absolute bottom--1 left-1/2 transform -translate-x-1/2"
                     >
                         <motion.div
                             animate={{ y: [0, 10, 0] }}

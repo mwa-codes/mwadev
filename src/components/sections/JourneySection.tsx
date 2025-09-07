@@ -7,71 +7,65 @@ const JourneySection = () => {
     const phases = [
         {
             id: "student",
-            title: "Student Phase",
-            subtitle: "Learning & Experimenting",
+            title: "Continuous Learning",
+            subtitle: "Always Evolving & Growing",
             icon: GraduationCap,
-            status: "current",
-            period: "2023 - Present",
-            description: "Building foundational skills in full-stack development, AI, and IoT. Documenting my learning journey through blog posts and experimental projects.",
+            status: "active",
+            description: "Constantly expanding my knowledge in emerging technologies, frameworks, and development practices. Learning never stops in tech.",
             highlights: [
-                "Learning Next.js, React, and modern web development",
-                "Experimenting with AI and machine learning",
+                "Mastering Next.js, React, and modern web development",
+                "Exploring AI/ML integration and automation",
                 "Building IoT projects and hardware integrations",
-                "Writing technical blog posts and tutorials"
+                "Contributing to open source projects and communities"
             ],
             color: "from-green-500 to-emerald-600"
         },
         {
             id: "builder",
-            title: "Builder Phase",
-            subtitle: "Creating & Shipping",
+            title: "Active Building",
+            subtitle: "Creating & Shipping Products",
             icon: Hammer,
-            status: "upcoming",
-            period: "2024 - 2025",
-            description: "Transitioning from learning to building. Creating portfolio projects that solve real problems and demonstrate technical proficiency.",
+            status: "active",
+            description: "Actively developing and shipping projects that solve real problems. From MVPs to full-scale applications.",
             highlights: [
                 "AI PDF Chatbot with advanced document processing",
                 "IoT Dashboard for smart home automation",
-                "ERP System concept and prototype",
-                "Open source contributions and collaborations"
+                "ERP System solutions for small businesses",
+                "SaaS experiments and product development"
             ],
             color: "from-blue-500 to-cyan-600"
         },
         {
             id: "freelancer",
-            title: "Freelancer Phase",
-            subtitle: "Serving Clients",
+            title: "Client Services",
+            subtitle: "Delivering Professional Solutions",
             icon: Briefcase,
-            status: "planned",
-            period: "2025 - 2026",
-            description: "Offering development services to clients while building a reputation and portfolio. Learning business skills alongside technical growth.",
+            status: "active",
+            description: "Successfully delivering custom solutions for clients while building lasting business relationships and expanding my service portfolio.",
             highlights: [
-                "Client project portfolio and case studies",
-                "Service offerings and pricing strategies",
-                "Client testimonials and success stories",
-                "Business development and networking"
+                "Full-stack web applications for diverse clients",
+                "E-commerce and business automation solutions",
+                "Database design and API development",
+                "Ongoing maintenance and optimization services"
             ],
             color: "from-purple-500 to-violet-600"
         },
         {
-            id: "professional",
-            title: "Professional Phase",
-            subtitle: "Scaling & Leading",
+            id: "entrepreneur",
+            title: "Business Ventures",
+            subtitle: "Building & Scaling",
             icon: Trophy,
-            status: "vision",
-            period: "2026+",
-            description: "Establishing myself as a professional developer with expertise in multiple domains. Leading projects and potentially building SaaS products.",
+            status: "active",
+            description: "Developing business ventures, exploring new markets, and building sustainable income streams through technology and innovation.",
             highlights: [
-                "SaaS product development and launch",
-                "Team leadership and mentoring",
-                "Speaking at conferences and events",
-                "Building sustainable business ventures"
+                "SaaS product development and market validation",
+                "Digital agency and consulting services",
+                "Passive income through digital products",
+                "Strategic partnerships and collaborations"
             ],
             color: "from-orange-500 to-red-600"
         }
-    ];
-
-    const containerVariants = {
+    ]; const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -92,14 +86,8 @@ const JourneySection = () => {
 
     const getStatusStyle = (status: string) => {
         switch (status) {
-            case "current":
+            case "active":
                 return "border-green-500 bg-green-50 dark:bg-green-900/20";
-            case "upcoming":
-                return "border-blue-500 bg-blue-50 dark:bg-blue-900/20";
-            case "planned":
-                return "border-purple-500 bg-purple-50 dark:bg-purple-900/20";
-            case "vision":
-                return "border-orange-500 bg-orange-50 dark:bg-orange-900/20";
             default:
                 return "border-gray-300 bg-gray-50 dark:bg-gray-800";
         }
@@ -107,37 +95,17 @@ const JourneySection = () => {
 
     const getStatusBadge = (status: string) => {
         switch (status) {
-            case "current":
+            case "active":
                 return (
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
                         <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse mr-2"></div>
-                        Current
-                    </span>
-                );
-            case "upcoming":
-                return (
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-                        Next
-                    </span>
-                );
-            case "planned":
-                return (
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
-                        Planned
-                    </span>
-                );
-            case "vision":
-                return (
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200">
-                        Vision
+                        Active
                     </span>
                 );
             default:
                 return null;
         }
-    };
-
-    return (
+    }; return (
         <section id="journey" className="py-20 bg-gray-50 dark:bg-gray-800/50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
@@ -148,10 +116,10 @@ const JourneySection = () => {
                     className="text-center mb-16"
                 >
                     <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-                        My Development Journey
+                        My Life Journey
                     </motion.h2>
                     <motion.p variants={itemVariants} className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                        From student to professional - a roadmap of continuous growth and evolution in technology
+                        Always learning, always evolving — in life and in technology.
                     </motion.p>
                 </motion.div>
 
@@ -186,17 +154,12 @@ const JourneySection = () => {
                                         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                                             {phase.title}
                                         </h3>
-                                        <p className="text-lg text-gray-600 dark:text-gray-300 mb-2">
+                                        <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
                                             {phase.subtitle}
-                                        </p>
-                                        <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-                                            {phase.period}
                                         </p>
                                         <p className="text-gray-700 dark:text-gray-300 mb-6">
                                             {phase.description}
-                                        </p>
-
-                                        <div className="space-y-2">
+                                        </p>                                        <div className="space-y-2">
                                             <h4 className="font-semibold text-gray-900 dark:text-white">
                                                 Key Focus Areas:
                                             </h4>

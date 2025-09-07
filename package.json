@@ -1,13 +1,13 @@
 {
   "name": "mwadev",
   "version": "1.0.0",
-  "description": "Personal website for Muhammed Waqar - Always Developing. A journey from student to professional developer.",
-  "author": "Muhammed Waqar <muhammed@mwadev.me>",
+  "description": "Personal website for Muhammed Waqar Ahmed - Always Developing. A journey from student to professional developer.",
+  "author": "Muhammed Waqar Ahmed <m.waqar.ahmed@gmail.com>",
   "license": "MIT",
   "homepage": "https://mwadev.me",
   "repository": {
     "type": "git",
-    "url": "https://github.com/muhammed-waqar/mwadev.git"
+    "url": "https://github.com/mwa-codes/mwadev.git"
   },
   "keywords": [
     "personal-website",

@@ -14,26 +14,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammed Waqar - Always Developing | mwadev.me",
-  description: "Follow my journey from student to professional developer. Web development, AI, IoT projects and learning experiences.",
-  keywords: ["Muhammed Waqar", "Web Developer", "Next.js", "React", "AI", "IoT", "Student Developer"],
-  authors: [{ name: "Muhammed Waqar" }],
-  creator: "Muhammed Waqar",
+  title: "Muhammed Waqar Ahmed - Always Developing | mwadev.me",
+  description: "Personal website of Muhammed Waqar Ahmed, showcasing my journey from student to professional developer. Explore projects, insights, and more.",
+  keywords: ["Muhammed Waqar Ahmed", "Web Developer", "Next.js", "React", "AI", "IoT", "Student Developer"],
+  authors: [{ name: "Muhammed Waqar Ahmed" }],
+  creator: "Muhammed Waqar Ahmed",
   openGraph: {
-    title: "Muhammed Waqar - Always Developing",
-    description: "Follow my journey from student to professional developer",
+    title: "Muhammed Waqar Ahmed - Always Developing",
+    description: "Personal website showcasing my development journey and projects",
     url: "https://mwadev.me",
     siteName: "mwadev.me",
+    locale: "en_US",
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Muhammed Waqar - Always Developing",
-    description: "Follow my journey from student to professional developer",
-    creator: "@muhammed_waqar",
+    title: "Muhammed Waqar Ahmed - Always Developing",
+    description: "Personal website showcasing my development journey and projects",
+    creator: "@mwadev",
   },
-  viewport: "width=device-width, initial-scale=1",
-  robots: "index, follow",
 };
 
 export default function RootLayout({

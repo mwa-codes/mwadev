@@ -35,8 +35,8 @@ const Header = () => {
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
-                    ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800"
-                    : "bg-transparent"
+                ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800"
+                : "bg-transparent"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,7 +47,7 @@ const Header = () => {
                         className="flex items-center space-x-2"
                     >
                         <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                            <span className="text-white font-bold text-lg">MW</span>
+                            <span className="text-white font-bold text-lg">MWA</span>
                         </div>
                         <div className="hidden sm:block">
                             <h1 className="text-xl font-bold text-gray-900 dark:text-white">
