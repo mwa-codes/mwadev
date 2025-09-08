@@ -48,37 +48,37 @@ const HeroSection = () => {
 
                     {/* Main Heading */}
                     <motion.div variants={itemVariants} className="space-y-4">
-                        <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white">
-                            Muhammed Waqar
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white">
+                            MWA
                             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                                {" "}Ahmed
+                                {" "}Develops
                             </span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-medium">
-                            Learning, building, and evolving — in code and in life
+                        <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-medium">
+                            Where Ideas Meet Reality
                         </p>
                     </motion.div>
 
                     {/* Current Status */}
-                    <motion.div variants={itemVariants} className="space-y-4">
-                        <div className="inline-flex items-center px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full">
+                    <motion.div variants={itemVariants} className="space-y-4 px-4">
+                        <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full">
                             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse mr-2"></div>
-                            <span className="text-blue-800 dark:text-blue-300 font-medium">
+                            <span className="text-sm sm:text-base text-blue-800 dark:text-blue-300 font-medium text-center">
                                 Currently Active in All Phases - Learning, Building & Growing
                             </span>
                         </div>
-                        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                        <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-4">
                             Entrepreneur, student, freelancer, and family person - thriving in multiple roles while building meaningful solutions and relationships.
                         </p>
                     </motion.div>
 
                     {/* CTA Buttons */}
-                    <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
                         <motion.a
                             href="#journey"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                            className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-center"
                         >
                             Explore My Journey
                         </motion.a>
@@ -86,7 +86,7 @@ const HeroSection = () => {
                             href="#projects"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="px-8 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300"
+                            className="w-full sm:w-auto px-6 sm:px-8 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300 text-center"
                         >
                             View Projects
                         </motion.a>

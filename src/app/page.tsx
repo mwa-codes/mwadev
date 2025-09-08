@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 import JourneySection from "@/components/sections/JourneySection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
-import BlogSection from "@/components/sections/BlogSection";
+import ServicesSection from "@/components/sections/ServicesSection";
 import ContactSection from "@/components/sections/ContactSection";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
         <HeroSection />
         <JourneySection />
         <ProjectsSection />
-        <BlogSection />
+        <ServicesSection />
         <ContactSection />
       </main>
       <Footer />

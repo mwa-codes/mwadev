@@ -106,7 +106,7 @@ const JourneySection = () => {
                 return null;
         }
     }; return (
-        <section id="journey" className="py-20 bg-gray-50 dark:bg-gray-800/50">
+        <section id="journey" className="py-20 bg-gray-50 dark:bg-gray-900">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     variants={containerVariants}
@@ -115,10 +115,10 @@ const JourneySection = () => {
                     viewport={{ once: true, amount: 0.3 }}
                     className="text-center mb-16"
                 >
-                    <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                    <motion.h2 variants={itemVariants} className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 px-4">
                         My Life Journey
                     </motion.h2>
-                    <motion.p variants={itemVariants} className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    <motion.p variants={itemVariants} className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
                         Always learning, always evolving — in life and in technology.
                     </motion.p>
                 </motion.div>
@@ -139,25 +139,25 @@ const JourneySection = () => {
                                     }`}
                             >
                                 {/* Content Card */}
-                                <div className="flex-1 max-w-lg">
+                                <div className="flex-1 max-w-lg mx-4 lg:mx-0">
                                     <motion.div
                                         whileHover={{ scale: 1.02, y: -5 }}
-                                        className={`p-6 rounded-xl border-2 ${getStatusStyle(phase.status)} shadow-lg`}
+                                        className={`p-4 sm:p-6 rounded-xl border-2 ${getStatusStyle(phase.status)} shadow-lg`}
                                     >
                                         <div className="flex items-center justify-between mb-4">
-                                            <div className={`p-3 rounded-lg bg-gradient-to-r ${phase.color} text-white`}>
-                                                <phase.icon size={24} />
+                                            <div className={`p-2 sm:p-3 rounded-lg bg-gradient-to-r ${phase.color} text-white`}>
+                                                <phase.icon size={20} className="sm:w-6 sm:h-6" />
                                             </div>
                                             {getStatusBadge(phase.status)}
                                         </div>
 
-                                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                                        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-2">
                                             {phase.title}
                                         </h3>
-                                        <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
+                                        <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-4">
                                             {phase.subtitle}
                                         </p>
-                                        <p className="text-gray-700 dark:text-gray-300 mb-6">
+                                        <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-6">
                                             {phase.description}
                                         </p>                                        <div className="space-y-2">
                                             <h4 className="font-semibold text-gray-900 dark:text-white">
@@ -196,15 +196,15 @@ const JourneySection = () => {
                     className="text-center mt-16"
                 >
                     <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                        Want to follow along on this journey?
+                        Ready to work together on your next project?
                     </p>
                     <motion.a
-                        href="#blog"
+                        href="#services"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
                     >
-                        Read My Blog
+                        View My Services
                         <ArrowRight size={20} className="ml-2" />
                     </motion.a>
                 </motion.div>

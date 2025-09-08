@@ -28,14 +28,21 @@ export function ThemeProvider({
     storageKey = "mwadev-theme",
     ...props
 }: ThemeProviderProps) {
-    const [theme, setTheme] = useState<Theme>(() => {
-        if (typeof window !== "undefined") {
-            return (localStorage.getItem(storageKey) as Theme) || defaultTheme;
+    const [theme, setTheme] = useState<Theme>(defaultTheme);
+    const [mounted, setMounted] = useState(false);
+
+    // Avoid hydration mismatch
+    useEffect(() => {
+        setMounted(true);
+        const storedTheme = localStorage.getItem(storageKey) as Theme;
+        if (storedTheme) {
+            setTheme(storedTheme);
         }
-        return defaultTheme;
-    });
+    }, [storageKey]);
 
     useEffect(() => {
+        if (!mounted) return;
+
         const root = window.document.documentElement;
 
         root.classList.remove("light", "dark");
@@ -51,15 +58,20 @@ export function ThemeProvider({
         }
 
         root.classList.add(theme);
-    }, [theme]);
+    }, [theme, mounted]);
+
+    // Don't render anything until mounted to avoid hydration mismatch
+    if (!mounted) {
+        return <>{children}</>;
+    }
 
     const value = {
         theme,
-        setTheme: (theme: Theme) => {
+        setTheme: (newTheme: Theme) => {
             if (typeof window !== "undefined") {
-                localStorage.setItem(storageKey, theme);
+                localStorage.setItem(storageKey, newTheme);
             }
-            setTheme(theme);
+            setTheme(newTheme);
         },
     };
 

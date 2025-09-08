@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Github, ExternalLink, Code, Brain, Home, Database } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 const ProjectsSection = () => {
     const [activeFilter, setActiveFilter] = useState("all");
@@ -18,13 +19,13 @@ const ProjectsSection = () => {
         {
             id: "ai-pdf-chatbot",
             title: "AI PDF Chatbot",
-            description: "An intelligent chatbot that can read, understand, and answer questions about PDF documents using advanced NLP and vector embeddings.",
-            image: "/api/placeholder/400/250",
-            tags: ["Next.js", "OpenAI", "Vector DB", "TypeScript"],
+            description: "QPDF is a full-stack AI PDF chatbot that lets users interact with documents using natural language. I built it using FastAPI, React, PostgreSQL, and OpenAI APIs. It extracts and chunks PDF content, generates embeddings, and semantically matches user queries to relevant document sections. Features include file upload, smart chunking, and a chat interface. Ideal for students, researchers, and professionals who want quick insights from lengthy PDFs.",
+            image: "/images/projects/QPDF.png",
+            tags: ["Next.js", "OpenAI", "FastAPI", "PostgreSQL"],
             category: "ai",
-            status: "in-development",
-            github: "#",
-            demo: "#",
+            status: "live",
+            github: "https://github.com/mwa-codes/QPDF",
+            demo: "https://www.qpdf.tech",
             features: [
                 "PDF document processing and chunking",
                 "Vector embeddings for semantic search",
@@ -33,54 +34,62 @@ const ProjectsSection = () => {
             ]
         },
         {
-            id: "iot-dashboard",
-            title: "Smart Home IoT Dashboard",
-            description: "A comprehensive dashboard for monitoring and controlling IoT devices in a smart home setup with real-time data visualization.",
-            image: "/api/placeholder/400/250",
-            tags: ["React", "Node.js", "MQTT", "Arduino"],
-            category: "iot",
-            status: "planned",
-            github: "#",
-            demo: "#",
+            id: "ai-resumecraft",
+            title: "Complete AI Resume Analysis Platform",
+            description: "Developed and deployed a complete AI Resume Analysis Platform, featuring both instant Guest Mode analysis for lead generation and a full User Account system with dashboards for registered users. This production-ready solution includes progress tracking, analysis history, PDF/text export, and mobile responsiveness. Built with Next.js 15, OpenAI GPT-4, Supabase, TypeScript, and Tailwind CSS, it offers a professional, scalable, and immediate business asset for career coaches, HR, and resume consultants. Saved clients 97%+ over custom development.",
+            image: "/images/projects/ResumeCraft.png",
+            tags: ["Next.js", "Sass Development", "Supabase", "AI Development", "Vercel"],
+            category: "ai",
+            status: "live",
+            github: "https://github.com/mwa-codes/ResumeCraft",
+            demo: "https://resumecraft-rose.vercel.app",
             features: [
-                "Real-time sensor data monitoring",
-                "Device control interface",
-                "Energy consumption tracking",
-                "Automated routines and schedules"
+                "Instant resume analysis in Guest Mode for quick insights",
+                "User accounts with personalized dashboards and history",
+                "Detailed AI-driven feedback with scoring and suggestions",
+                "Export analysis results as PDF or text for easy sharing",
+                "Progress tracking across multiple resumes",
+                "Mobile-friendly responsive design",
+                "Built for career coaches, HR professionals, and job seekers"
             ]
         },
         {
-            id: "erp-concept",
-            title: "Modern ERP System",
-            description: "A concept for a modern, modular ERP system designed for small to medium businesses with focus on usability and scalability.",
-            image: "/api/placeholder/400/250",
-            tags: ["Next.js", "PostgreSQL", "Prisma", "tRPC"],
-            category: "web",
-            status: "concept",
-            github: "#",
-            demo: "#",
-            features: [
-                "Modular architecture design",
-                "Inventory management",
-                "Financial tracking",
-                "Customer relationship management"
-            ]
-        },
-        {
-            id: "learning-blog",
-            title: "Development Blog Platform",
-            description: "A personal blog platform built to document my learning journey with markdown support and interactive code examples.",
-            image: "/api/placeholder/400/250",
-            tags: ["Next.js", "MDX", "Tailwind", "Vercel"],
+            id: "ai-math-tutor",
+            title: "AI-Powered Math Teaching Assistant for WordPress",
+            description: "I developed a WordPress site featuring an AI-powered Math Teaching Assistant. Utilizing the OpenAI API, this assistant can solve and explain a wide range of math problems, from basic arithmetic to advanced calculus. The site offers an intuitive user interface, customizable lessons, and real-time feedback. This project highlights my skills in WordPress development, AI integration, and educational technology, creating a scalable and interactive platform for personalized math tutoring.",
+            image: "/images/projects/Math-tutor.png",
+            tags: ["WordPress Development", "API Integration", "Artificial Intelligence", "Responsive Design"],
             category: "web",
             status: "live",
             github: "#",
+            demo: "https://artinvtech.com/math-ai/",
+            features: [
+                "AI-powered math problem solving with step-by-step explanations",
+                "Covers topics from basic arithmetic to advanced calculus",
+                "Interactive and intuitive WordPress-based user interface",
+                "Customizable lessons tailored to different learning levels",
+                "Real-time feedback for student queries",
+                "Scalable and responsive design for desktop and mobile",
+                "Seamless OpenAI API integration for educational use"
+            ]
+        },
+        {
+            id: "BartanERP",
+            title: "BartanERP – Lightweight ERP for Small Manufacturers",
+            description: "BartanERP is a lightweight, modular ERP system designed specifically for small-scale manufacturing units like aluminum utensil factories. It streamlines day-to-day operations and replaces manual record-keeping with a simple, digital workflow.",
+            image: "/images/projects/BatanERP.png",
+            tags: ["React", "PostgreSQL", "FastAPI", "Tailwind"],
+            category: "web",
+            status: "in-development",
+            github: "https://github.com/mwa-codes/BartanERP.git",
             demo: "#",
             features: [
-                "MDX support for rich content",
-                "Syntax highlighting",
-                "Reading time estimation",
-                "Tag-based categorization"
+                "Employee & attendance management",
+                "Vendor & customer records",
+                "Inventory & stock tracking",
+                "Manufacturing process monitoring (e.g., rolling, production steps)",
+                "Order & delivery management",
+                "Reporting & analytics dashboards"
             ]
         }
     ];
@@ -148,10 +157,10 @@ const ProjectsSection = () => {
                     viewport={{ once: true, amount: 0.3 }}
                     className="text-center mb-16"
                 >
-                    <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                    <motion.h2 variants={itemVariants} className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 px-4">
                         Projects & Experiments
                     </motion.h2>
-                    <motion.p variants={itemVariants} className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    <motion.p variants={itemVariants} className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
                         A collection of projects that showcase my journey from learning to building real-world applications
                     </motion.p>
                 </motion.div>
@@ -172,8 +181,8 @@ const ProjectsSection = () => {
                             whileTap={{ scale: 0.95 }}
                             onClick={() => setActiveFilter(filter.id)}
                             className={`flex items-center px-6 py-3 rounded-lg font-medium transition-all duration-300 ${activeFilter === filter.id
-                                    ? "bg-blue-600 text-white shadow-lg"
-                                    : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+                                ? "bg-blue-600 text-white shadow-lg"
+                                : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
                                 }`}
                         >
                             <filter.icon size={18} className="mr-2" />
@@ -185,7 +194,7 @@ const ProjectsSection = () => {
                 {/* Projects Grid */}
                 <motion.div
                     layout
-                    className="grid grid-cols-1 md:grid-cols-2 gap-8"
+                    className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 px-4 sm:px-0"
                 >
                     {filteredProjects.map((project) => (
                         <motion.div
@@ -197,11 +206,15 @@ const ProjectsSection = () => {
                             whileHover={{ y: -5 }}
                             className="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
                         >
-                            {/* Project Image Placeholder */}
-                            <div className="h-48 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
-                                <div className="text-white text-6xl font-bold opacity-20">
-                                    {project.title.split(" ").map(word => word[0]).join("")}
-                                </div>
+                            {/* Project Image */}
+                            <div className="h-48 overflow-hidden">
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    width={400}
+                                    height={250}
+                                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                />
                             </div>
 
                             <div className="p-6">

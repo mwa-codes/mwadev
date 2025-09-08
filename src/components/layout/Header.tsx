@@ -2,29 +2,38 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Menu, X, Moon, Sun } from "lucide-react";
 import { useTheme } from "@/lib/theme";
 
-const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false);
+export default function Header() {
+    const [isOpen, setIsOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
     const { theme, setTheme } = useTheme();
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 10);
+            setScrolled(window.scrollY > 50);
         };
+
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     const navItems = [
-        { name: "Home", href: "#home" },
+        { name: "About", href: "#about" },
         { name: "Journey", href: "#journey" },
         { name: "Projects", href: "#projects" },
-        { name: "Blog", href: "#blog" },
+        { name: "Services", href: "#services" },
         { name: "Contact", href: "#contact" },
     ];
+
+    const scrollToSection = (href: string) => {
+        const element = document.querySelector(href);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+        setIsOpen(false);
+    };
 
     const toggleTheme = () => {
         setTheme(theme === "dark" ? "light" : "dark");
@@ -34,9 +43,9 @@ const Header = () => {
         <motion.header
             initial={{ y: -100 }}
             animate={{ y: 0 }}
-            className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
-                ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800"
-                : "bg-transparent"
+            className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
+                    ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800"
+                    : "bg-transparent"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,15 +55,15 @@ const Header = () => {
                         whileHover={{ scale: 1.05 }}
                         className="flex items-center space-x-2"
                     >
-                        <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                            <span className="text-white font-bold text-lg">MWA</span>
+                        <div className="w-12 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span className="text-white font-bold text-sm">MWA</span>
                         </div>
                         <div className="hidden sm:block">
                             <h1 className="text-xl font-bold text-gray-900 dark:text-white">
-                                mwadev.me
+                                Muhammed Waqar Ahmed
                             </h1>
                             <p className="text-xs text-gray-600 dark:text-gray-400">
-                                Always Developing
+                                Learning, building, evolving — in code and in life
                             </p>
                         </div>
                     </motion.div>
@@ -67,35 +76,39 @@ const Header = () => {
                                 href={item.href}
                                 whileHover={{ y: -2 }}
                                 className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    scrollToSection(item.href);
+                                }}
                             >
                                 {item.name}
                             </motion.a>
                         ))}
                     </nav>
 
-                    {/* Theme Toggle & Mobile Menu */}
+                    {/* Theme Toggle and Mobile Menu Button */}
                     <div className="flex items-center space-x-4">
-                        <motion.button
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
+                        {/* Theme Toggle */}
+                        <button
                             onClick={toggleTheme}
-                            className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                            className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                            aria-label="Toggle theme"
                         >
                             {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-                        </motion.button>
+                        </button>
 
                         {/* Mobile Menu Button */}
                         <button
                             className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            onClick={() => setIsOpen(!isOpen)}
                         >
-                            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+                            {isOpen ? <X size={20} /> : <Menu size={20} />}
                         </button>
                     </div>
                 </div>
 
                 {/* Mobile Navigation */}
-                {isMenuOpen && (
+                {isOpen && (
                     <motion.nav
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -107,7 +120,10 @@ const Header = () => {
                                     key={item.name}
                                     href={item.href}
                                     className="px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                                    onClick={() => setIsMenuOpen(false)}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        scrollToSection(item.href);
+                                    }}
                                 >
                                     {item.name}
                                 </a>
@@ -118,6 +134,4 @@ const Header = () => {
             </div>
         </motion.header>
     );
-};
-
-export default Header;
+}

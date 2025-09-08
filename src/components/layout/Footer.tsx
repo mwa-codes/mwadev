@@ -15,13 +15,13 @@ const Footer = () => {
             { name: "Home", href: "#home" },
             { name: "Journey", href: "#journey" },
             { name: "Projects", href: "#projects" },
-            { name: "Blog", href: "#blog" },
+            { name: "Services", href: "#services" },
             { name: "Contact", href: "#contact" },
         ],
         resources: [
-            { name: "Resume", href: "/resume.pdf" },
-            { name: "Blog RSS", href: "/rss.xml" },
-            { name: "Site Map", href: "/sitemap.xml" },
+            { name: "Download Resume", href: "/resume.html" },
+            { name: "View Services", href: "#services" },
+            { name: "Get In Touch", href: "#contact" },
         ]
     };
 
@@ -35,12 +35,12 @@ const Footer = () => {
                             whileHover={{ scale: 1.05 }}
                             className="flex items-center space-x-3 mb-4"
                         >
-                            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                                <span className="text-white font-bold text-lg">MW</span>
+                            <div className="w-12 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                                <span className="text-white font-bold text-lg">MWA</span>
                             </div>
                             <div>
-                                <h3 className="text-xl font-bold">mwadev.me</h3>
-                                <p className="text-sm text-gray-400">Always Developing</p>
+                                <h3 className="text-xl font-bold">Muhammed Waqar Ahmed</h3>
+                                <p className="text-sm text-gray-400">Learning, building, evolving — in code and in life</p>
                             </div>
                         </motion.div>
                         <p className="text-gray-300 mb-4 max-w-md">
@@ -92,7 +92,7 @@ const Footer = () => {
                 {/* Bottom Section */}
                 <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
                     <div className="text-gray-400 text-sm mb-4 sm:mb-0">
-                        © {currentYear} Muhammed Waqar. All rights reserved.
+                        © {currentYear} Muhammed Waqar Ahmed. All rights reserved.
                     </div>
 
                     <motion.button

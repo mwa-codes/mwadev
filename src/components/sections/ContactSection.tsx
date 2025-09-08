@@ -107,15 +107,15 @@ const ContactSection = () => {
                     viewport={{ once: true, amount: 0.3 }}
                     className="text-center mb-16"
                 >
-                    <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                    <motion.h2 variants={itemVariants} className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 px-4">
                         Let&apos;s Connect
                     </motion.h2>
-                    <motion.p variants={itemVariants} className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    <motion.p variants={itemVariants} className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
                         Whether you want to collaborate on a project, share ideas, or just say hello, I&apos;d love to hear from you!
                     </motion.p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 px-4 sm:px-0">
                     {/* Contact Form */}
                     <motion.div
                         variants={containerVariants}
