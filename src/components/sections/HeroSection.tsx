@@ -95,7 +95,7 @@ const HeroSection = () => {
                     {/* Social Links */}
                     <motion.div variants={itemVariants} className="flex justify-center space-x-6">
                         {[
-                            { icon: Github, href: "https://github.com/mwa-ch", label: "GitHub" },
+                            { icon: Github, href: "https://github.com/mwa-codes", label: "GitHub" },
                             { icon: Linkedin, href: "https://www.linkedin.com/in/mwaqarahmed/", label: "LinkedIn" },
                             { icon: Mail, href: "mailto:m.waqar.ahmed@gmail.com", label: "Email" },
                         ].map(({ icon: Icon, href, label }) => (
