@@ -81,12 +81,38 @@ export default function Page() {
         ]
     };
 
+    const articleSchema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Ultimate Guide to AI Development Tools in 2025",
+        "description": "Build faster with the best AI development tools. Compare IDEs, codegen, testing, and CI/CD automation for real ROI in 2025.",
+        "author": {
+            "@type": "Person",
+            "name": "Muhammed Waqar Ahmed",
+            "url": "https://mwadev.me"
+        },
+        "datePublished": "2025-10-01",
+        "dateModified": "2025-10-12",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://mwadev.me/blog/ultimate-guide-ai-development-tools"
+        },
+        "image": [
+            `https://mwadev.me/og?title=${encodeURIComponent('AI Development Tools in 2025')}&subtitle=${encodeURIComponent('AI-powered IDEs • Copilot vs Tabnine • Automation')}`
+        ]
+    };
+
     return (
         <>
             <Script
                 id="faq-schema"
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c') }}
+            />
+            <Script
+                id="article-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }}
             />
             <div className="min-h-screen bg-white dark:bg-gray-900">
                 <Header />

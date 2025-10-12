@@ -49,14 +49,13 @@ const HeroSection = () => {
                     {/* Main Heading */}
                     <motion.div variants={itemVariants} className="space-y-4">
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white">
-                            MWA
-                            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                                {" "}Develops
-                            </span>
+                            AI-Driven Full-Stack Developer
                         </h1>
-                        <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-medium">
-                            Where Ideas Meet Reality
-                        </p>
+                        <div className="space-y-2 text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-medium">
+                            <h2>Building Scalable Web & AI Applications with Next.js and FastAPI</h2>
+                            <h2>High-Performance Data Backends with Supabase & PostgreSQL</h2>
+                            <h2>Seamless CI/CD and Global Deployment on Vercel</h2>
+                        </div>
                     </motion.div>
 
                     {/* Current Status */}

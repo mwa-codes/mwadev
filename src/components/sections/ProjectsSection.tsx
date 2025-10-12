@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { Github, ExternalLink, Code, Brain, Home, Database } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { projects as allProjects, type Project } from "@/data/projects";
 
 const ProjectsSection = () => {
     const [activeFilter, setActiveFilter] = useState("all");
@@ -15,84 +17,7 @@ const ProjectsSection = () => {
         { id: "web", name: "Web Apps", icon: Database },
     ];
 
-    const projects = [
-        {
-            id: "ai-pdf-chatbot",
-            title: "AI PDF Chatbot",
-            description: "QPDF is a full-stack AI PDF chatbot that lets users interact with documents using natural language. I built it using FastAPI, React, PostgreSQL, and OpenAI APIs. It extracts and chunks PDF content, generates embeddings, and semantically matches user queries to relevant document sections. Features include file upload, smart chunking, and a chat interface. Ideal for students, researchers, and professionals who want quick insights from lengthy PDFs.",
-            image: "/images/projects/QPDF.png",
-            tags: ["Next.js", "OpenAI", "FastAPI", "PostgreSQL"],
-            category: "ai",
-            status: "live",
-            github: "https://github.com/mwa-codes/QPDF",
-            demo: "https://www.qpdf.tech",
-            features: [
-                "PDF document processing and chunking",
-                "Vector embeddings for semantic search",
-                "Real-time chat interface",
-                "Context-aware responses"
-            ]
-        },
-        {
-            id: "ai-resumecraft",
-            title: "Complete AI Resume Analysis Platform",
-            description: "Developed and deployed a complete AI Resume Analysis Platform, featuring both instant Guest Mode analysis for lead generation and a full User Account system with dashboards for registered users. This production-ready solution includes progress tracking, analysis history, PDF/text export, and mobile responsiveness. Built with Next.js 15, OpenAI GPT-4, Supabase, TypeScript, and Tailwind CSS, it offers a professional, scalable, and immediate business asset for career coaches, HR, and resume consultants. Saved clients 97%+ over custom development.",
-            image: "/images/projects/ResumeCraft.png",
-            tags: ["Next.js", "Sass Development", "Supabase", "AI Development", "Vercel"],
-            category: "ai",
-            status: "live",
-            github: "https://github.com/mwa-codes/ResumeCraft",
-            demo: "https://resumecraft-rose.vercel.app",
-            features: [
-                "Instant resume analysis in Guest Mode for quick insights",
-                "User accounts with personalized dashboards and history",
-                "Detailed AI-driven feedback with scoring and suggestions",
-                "Export analysis results as PDF or text for easy sharing",
-                "Progress tracking across multiple resumes",
-                "Mobile-friendly responsive design",
-                "Built for career coaches, HR professionals, and job seekers"
-            ]
-        },
-        {
-            id: "ai-math-tutor",
-            title: "AI-Powered Math Teaching Assistant for WordPress",
-            description: "I developed a WordPress site featuring an AI-powered Math Teaching Assistant. Utilizing the OpenAI API, this assistant can solve and explain a wide range of math problems, from basic arithmetic to advanced calculus. The site offers an intuitive user interface, customizable lessons, and real-time feedback. This project highlights my skills in WordPress development, AI integration, and educational technology, creating a scalable and interactive platform for personalized math tutoring.",
-            image: "/images/projects/Math-tutor.png",
-            tags: ["WordPress Development", "API Integration", "Artificial Intelligence", "Responsive Design"],
-            category: "web",
-            status: "live",
-            github: "#",
-            demo: "https://artinvtech.com/math-ai/",
-            features: [
-                "AI-powered math problem solving with step-by-step explanations",
-                "Covers topics from basic arithmetic to advanced calculus",
-                "Interactive and intuitive WordPress-based user interface",
-                "Customizable lessons tailored to different learning levels",
-                "Real-time feedback for student queries",
-                "Scalable and responsive design for desktop and mobile",
-                "Seamless OpenAI API integration for educational use"
-            ]
-        },
-        {
-            id: "BartanERP",
-            title: "BartanERP – Lightweight ERP for Small Manufacturers",
-            description: "BartanERP is a lightweight, modular ERP system designed specifically for small-scale manufacturing units like aluminum utensil factories. It streamlines day-to-day operations and replaces manual record-keeping with a simple, digital workflow.",
-            image: "/images/projects/BatanERP.png",
-            tags: ["React", "PostgreSQL", "FastAPI", "Tailwind"],
-            category: "web",
-            status: "in-development",
-            github: "https://github.com/mwa-codes/BartanERP.git",
-            demo: "#",
-            features: [
-                "Employee & attendance management",
-                "Vendor & customer records",
-                "Inventory & stock tracking",
-                "Manufacturing process monitoring (e.g., rolling, production steps)",
-                "Order & delivery management",
-                "Reporting & analytics dashboards"
-            ]
-        }
-    ];
+    const projects: Project[] = allProjects;
 
     const getStatusColor = (status: string) => {
         switch (status) {
@@ -208,22 +133,40 @@ const ProjectsSection = () => {
                         >
                             {/* Project Image */}
                             <div className="h-48 overflow-hidden">
-                                <Image
-                                    src={project.image}
-                                    alt={project.title}
-                                    width={400}
-                                    height={250}
-                                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                                />
+                                {project.slug ? (
+                                    <Link href={`/projects/${project.slug}`} aria-label={`Open ${project.title} details`}>
+                                        <Image
+                                            src={project.image}
+                                            alt={project.title}
+                                            width={400}
+                                            height={250}
+                                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                        />
+                                    </Link>
+                                ) : (
+                                    <Image
+                                        src={project.image}
+                                        alt={project.title}
+                                        width={400}
+                                        height={250}
+                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                    />
+                                )}
                             </div>
 
                             <div className="p-6">
                                 {/* Header */}
                                 <div className="flex items-start justify-between mb-4">
                                     <div>
-                                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                                            {project.title}
-                                        </h3>
+                                        {project.slug ? (
+                                            <Link href={`/projects/${project.slug}`} className="text-xl font-bold text-gray-900 dark:text-white mb-2 hover:underline">
+                                                {project.title}
+                                            </Link>
+                                        ) : (
+                                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                                                {project.title}
+                                            </h3>
+                                        )}
                                         <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(project.status)}`}>
                                             {getStatusText(project.status)}
                                         </span>
@@ -234,6 +177,24 @@ const ProjectsSection = () => {
                                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                                     {project.description}
                                 </p>
+
+                                {/* Screenshots (optional) */}
+                                {project.screenshots && project.screenshots.length > 0 && (
+                                    <div className="mb-4">
+                                        <div className="grid grid-cols-2 gap-2">
+                                            {project.screenshots.slice(0, 2).map((shot, i) => (
+                                                <div key={i} className="relative h-24 rounded overflow-hidden">
+                                                    <Image
+                                                        src={shot.src}
+                                                        alt={shot.alt}
+                                                        fill
+                                                        className="object-cover"
+                                                    />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
 
                                 {/* Features */}
                                 <div className="mb-4">
@@ -273,6 +234,17 @@ const ProjectsSection = () => {
                                         <Github size={16} className="mr-2" />
                                         Code
                                     </motion.a>
+                                    {project.slug && (
+                                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                                            <Link
+                                                href={`/projects/${project.slug}`}
+                                                className="flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                                                aria-label={`View ${project.title} project details`}
+                                            >
+                                                Details
+                                            </Link>
+                                        </motion.div>
+                                    )}
                                     {project.status === "live" && (
                                         <motion.a
                                             href={project.demo}

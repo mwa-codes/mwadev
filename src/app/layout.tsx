@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from 'next/font/google';
 import "./globals.css";
 import { ThemeProvider } from "@/lib/theme";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mwadev.me"),
   title: "Muhammed Waqar Ahmed",
   description: "Personal website of Muhammed Waqar Ahmed — sharing my journey as a data science student, developer, and entrepreneur. Explore projects in AI, IoT, and full-stack development, along with insights from learning, building, and growing in technology and life.",
   keywords: ["Muhammed Waqar Ahmed", "MWA developer", "mwadev", "AI developer portfolio", "AI projects", "IoT projects", "Next.js developer", "Full-stack developer", "Data science student", "AI resume analyzer", "AI chatbot Developer", "Freelance developer portfolio"],
@@ -41,10 +38,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-900 transition-colors duration-300`}
-      >
-        <ThemeProvider defaultTheme="system" storageKey="mwadev-theme">
+      <body className={`${inter.variable} font-sans antialiased bg-white dark:bg-gray-900 transition-colors duration-300`}>
+        <ThemeProvider>
           {children}
         </ThemeProvider>
       </body>
