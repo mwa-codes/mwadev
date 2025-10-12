@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin, Twitter, MapPin, Phone, Send } from "lucide-react";
+import { Mail, Github, Linkedin, MessageCircle, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
 
 const ContactSection = () => {
@@ -65,10 +65,10 @@ const ContactSection = () => {
             description: "Connect with me professionally"
         },
         {
-            name: "Twitter",
-            icon: Twitter,
-            href: "#",
-            description: "Follow my development journey"
+            name: "WhatsApp",
+            icon: MessageCircle,
+            href: "https://wa.me/923016636557",
+            description: "Chat with me directly on WhatsApp"
         },
         {
             name: "Email",
