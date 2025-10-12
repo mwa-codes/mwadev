@@ -196,7 +196,7 @@ MIT License - Feel free to use as inspiration for your own portfolio!
 
 - **Website**: [mwadev.me](https://mwadev.me)
 - **GitHub**: [@mwa-codes](https://github.com/mwa-codes)
-- **LinkedIn**: [Muhammed Waqar Ahmed](https://linkedin.com/in/mwaqar-ahmed)
+- **LinkedIn**: [Muhammed Waqar Ahmed](https://www.linkedin.com/in/mwaqarahmed/)
 - **Email**: [m.waqar.ahmed@gmail.com](mailto:m.waqar.ahmed@gmail.com)
 
 ---

@@ -55,7 +55,7 @@ const ContactSection = () => {
         {
             name: "GitHub",
             icon: Github,
-            href: "https://github.com/mwa-ch",
+            href: "https://github.com/mwa-codes",
             description: "Check out my code and projects"
         },
         {
