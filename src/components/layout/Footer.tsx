@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Heart, ArrowUp } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
     const scrollToTop = () => {
@@ -12,11 +13,12 @@ const Footer = () => {
 
     const footerLinks = {
         navigation: [
-            { name: "Home", href: "#home" },
-            { name: "Journey", href: "#journey" },
-            { name: "Projects", href: "#projects" },
-            { name: "Services", href: "#services" },
-            { name: "Contact", href: "#contact" },
+            { name: "Home", href: "/" },
+            { name: "Journey", href: "/#journey" },
+            { name: "Projects", href: "/#projects" },
+            { name: "Services", href: "/#services" },
+            { name: "Contact", href: "/#contact" },
+            { name: "Blog", href: "/blog" },
         ],
         resources: [
             { name: "Download Resume", href: "/resume.html" },
@@ -60,12 +62,21 @@ const Footer = () => {
                         <ul className="space-y-2">
                             {footerLinks.navigation.map((link) => (
                                 <li key={link.name}>
-                                    <a
-                                        href={link.href}
-                                        className="text-gray-300 hover:text-white transition-colors"
-                                    >
-                                        {link.name}
-                                    </a>
+                                    {link.href.startsWith("/") ? (
+                                        <Link
+                                            href={link.href}
+                                            className="text-gray-300 hover:text-white transition-colors"
+                                        >
+                                            {link.name}
+                                        </Link>
+                                    ) : (
+                                        <a
+                                            href={link.href}
+                                            className="text-gray-300 hover:text-white transition-colors"
+                                        >
+                                            {link.name}
+                                        </a>
+                                    )}
                                 </li>
                             ))}
                         </ul>
