@@ -15,6 +15,29 @@ export type Project = {
 
 export const projects: Project[] = [
     {
+        id: 'conslinq-case-management-platform',
+        slug: 'conslinq',
+        title: 'Conslinq',
+        description:
+            'Conslinq is a live, tenant-aware immigration case management platform built for admins, vendors, resellers, team members, and clients to manage complete case workflows in one secure system.',
+        image: '/images/projects/conslinq.png',
+        tags: ['Next.js', 'FastAPI', 'TypeScript', 'Supabase', 'PostgreSQL', 'Railway', 'Vercel', 'Resend'],
+        category: 'web',
+        status: 'live',
+        github: '#',
+        demo: 'https://www.consulinq.com',
+        features: [
+            'Multi-role authentication and authorization',
+            'Tenant-aware routing and data isolation with row-level security',
+            'FastAPI backend on Railway and Next.js frontend on Vercel',
+            'Supabase PostgreSQL with JWT-based auth and protected APIs',
+            'Operational diagnostics endpoints for environment and connectivity checks',
+        ],
+        screenshots: [
+            { src: '/images/projects/conslinq.png', alt: 'Conslinq login and product overview' },
+        ],
+    },
+    {
         id: 'ai-pdf-chatbot',
         slug: 'qpdf',
         title: 'AI PDF Chatbot',
