@@ -188,10 +188,10 @@ const ServicesSection = () => {
                     className="text-center mb-16"
                 >
                     <motion.h2 variants={itemVariants} className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 px-4">
-                        Services & Solutions
+                        Next.js, FastAPI, Supabase, and AI Development Services
                     </motion.h2>
                     <motion.p variants={itemVariants} className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
-                        From web development to AI solutions, I help businesses and individuals bring their digital ideas to life
+                        I help startups and businesses design, build, and scale production-ready products with clear scope, reliable delivery, and measurable outcomes.
                     </motion.p>
                 </motion.div>
 
@@ -240,6 +240,12 @@ const ServicesSection = () => {
                                     <span className="text-gray-500 dark:text-gray-400">Timeline:</span>
                                     <span className="font-semibold text-gray-900 dark:text-white">{service.deliveryTime}</span>
                                 </div>
+                                <a
+                                    href="#projects"
+                                    className="inline-flex items-center mt-3 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+                                >
+                                    See related project examples
+                                </a>
                             </div>
                         </motion.div>
                     ))}

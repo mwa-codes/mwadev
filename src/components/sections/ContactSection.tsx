@@ -108,10 +108,13 @@ const ContactSection = () => {
                     className="text-center mb-16"
                 >
                     <motion.h2 variants={itemVariants} className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 px-4">
-                        Let&apos;s Connect
+                        Let&apos;s Build Something That Drives Results
                     </motion.h2>
                     <motion.p variants={itemVariants} className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
-                        Whether you want to collaborate on a project, share ideas, or just say hello, I&apos;d love to hear from you!
+                        Looking for a Next.js, FastAPI, Supabase, or AI developer for remote contract or long-term work? Share your goals and I&apos;ll reply with a clear action plan.
+                    </motion.p>
+                    <motion.p variants={itemVariants} className="mt-3 text-sm sm:text-base text-gray-500 dark:text-gray-400 px-4">
+                        Fast response, clear scope, and transparent delivery timelines.
                     </motion.p>
                 </motion.div>
 
@@ -125,7 +128,7 @@ const ContactSection = () => {
                         className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8"
                     >
                         <motion.h3 variants={itemVariants} className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                            Send me a message
+                            Send project details
                         </motion.h3>
 
                         <form onSubmit={handleSubmit} className="space-y-6">
@@ -255,7 +258,7 @@ const ContactSection = () => {
                                     </div>
                                     <div className="ml-4">
                                         <p className="text-sm font-medium text-gray-900 dark:text-white">Location</p>
-                                        <p className="text-sm text-gray-600 dark:text-gray-300">Available for remote work</p>
+                                        <p className="text-sm text-gray-600 dark:text-gray-300">Global remote collaboration</p>
                                     </div>
                                 </div>
 
@@ -265,7 +268,7 @@ const ContactSection = () => {
                                     </div>
                                     <div className="ml-4">
                                         <p className="text-sm font-medium text-gray-900 dark:text-white">Response Time</p>
-                                        <p className="text-sm text-gray-600 dark:text-gray-300">Usually within 24 hours</p>
+                                        <p className="text-sm text-gray-600 dark:text-gray-300">Usually within 24 hours (often faster)</p>
                                     </div>
                                 </div>
                             </div>

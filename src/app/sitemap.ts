@@ -39,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const siteUrl = 'https://mwadev.me';
     const now = new Date().toISOString();
 
-    const staticRoutes = ['/', '/blog'];
+    const staticRoutes = ['/', '/blog', '/resume.html'];
     const blogRoutes = getBlogRoutes();
     const projectRoutes = getProjectRoutes();
 
@@ -48,7 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             url: `${siteUrl}${route}`,
             lastModified: now,
             changeFrequency: 'weekly' as const,
-            priority: route === '/' ? 1.0 : 0.8,
+            priority: route === '/' ? 1.0 : route === '/resume.html' ? 0.7 : 0.8,
         })),
         ...blogRoutes.map((route) => ({
             url: `${siteUrl}${route}`,

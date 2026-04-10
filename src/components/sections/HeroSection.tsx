@@ -49,13 +49,23 @@ const HeroSection = () => {
                     {/* Main Heading */}
                     <motion.div variants={itemVariants} className="space-y-4">
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white">
-                            AI-Driven Full-Stack Developer
+                            Hire a Remote Next.js and FastAPI Developer
                         </h1>
-                        <div className="space-y-2 text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-medium">
-                            <h2>Building Scalable Web & AI Applications with Next.js and FastAPI</h2>
-                            <h2>High-Performance Data Backends with Supabase & PostgreSQL</h2>
-                            <h2>Seamless CI/CD and Global Deployment on Vercel</h2>
-                        </div>
+                        <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-medium max-w-4xl mx-auto px-4">
+                            I build production-ready SaaS and AI applications using Next.js, FastAPI, Supabase, and PostgreSQL for global remote clients.
+                        </p>
+                    </motion.div>
+
+                    <motion.div variants={itemVariants} className="flex flex-wrap gap-3 justify-center px-4">
+                        <span className="px-3 py-1 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
+                            Worldwide Remote Collaboration
+                        </span>
+                        <span className="px-3 py-1 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
+                            Typical Response: Within 24 Hours
+                        </span>
+                        <span className="px-3 py-1 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
+                            Contract and Full-Time Opportunities
+                        </span>
                     </motion.div>
 
                     {/* Current Status */}
@@ -63,23 +73,23 @@ const HeroSection = () => {
                         <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full">
                             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse mr-2"></div>
                             <span className="text-sm sm:text-base text-blue-800 dark:text-blue-300 font-medium text-center">
-                                Currently Active in All Phases - Learning, Building & Growing
+                                Open for new projects and remote roles
                             </span>
                         </div>
                         <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-4">
-                            Entrepreneur, student, freelancer, and family person - thriving in multiple roles while building meaningful solutions and relationships.
+                            From API architecture to frontend delivery, I help teams launch faster with clean code, measurable performance, and dependable communication.
                         </p>
                     </motion.div>
 
                     {/* CTA Buttons */}
                     <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
                         <motion.a
-                            href="#journey"
+                            href="#contact"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-center"
                         >
-                            Explore My Journey
+                            Discuss Your Project
                         </motion.a>
                         <motion.a
                             href="#projects"
@@ -87,7 +97,15 @@ const HeroSection = () => {
                             whileTap={{ scale: 0.95 }}
                             className="w-full sm:w-auto px-6 sm:px-8 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300 text-center"
                         >
-                            View Projects
+                            View Case Studies
+                        </motion.a>
+                        <motion.a
+                            href="/resume.html"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="w-full sm:w-auto px-6 sm:px-8 py-3 border-2 border-blue-600 text-blue-700 dark:text-blue-300 rounded-lg font-semibold hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300 text-center"
+                        >
+                            Download Resume
                         </motion.a>
                     </motion.div>
 

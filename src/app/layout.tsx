@@ -11,23 +11,61 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mwadev.me"),
-  title: "Muhammed Waqar Ahmed",
-  description: "Personal website of Muhammed Waqar Ahmed — sharing my journey as a data science student, developer, and entrepreneur. Explore projects in AI, IoT, and full-stack development, along with insights from learning, building, and growing in technology and life.",
-  keywords: ["Muhammed Waqar Ahmed", "MWA developer", "mwadev", "AI developer portfolio", "AI projects", "IoT projects", "Next.js developer", "Full-stack developer", "Data science student", "AI resume analyzer", "AI chatbot Developer", "Freelance developer portfolio"],
+  title: {
+    default: "AI Full-Stack Developer for Hire | Next.js, FastAPI, Supabase",
+    template: "%s | MWA Dev",
+  },
+  description: "Hire Muhammed Waqar Ahmed for remote full-stack and AI development. I build production-ready Next.js, FastAPI, and Supabase apps for startups and businesses worldwide.",
+  keywords: [
+    "hire next.js developer",
+    "fastapi developer",
+    "supabase expert",
+    "ai developer for hire",
+    "remote full stack developer",
+    "freelance next.js developer",
+    "postgresql backend developer",
+    "api development services",
+    "muhammed waqar ahmed",
+    "mwadev",
+  ],
   authors: [{ name: "Muhammed Waqar Ahmed" }],
   creator: "Muhammed Waqar Ahmed",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
-    title: "Muhammed Waqar Ahmed — Developer, Learner, Entrepreneur",
-    description: "Exploring technology and life through learning, building, and growing. Discover my projects in AI, IoT, and full-stack development, and follow my journey as a student, freelancer, and entrepreneur.",
+    title: "AI Full-Stack Developer for Hire | Next.js, FastAPI, Supabase",
+    description: "Remote developer building high-performance web and AI products with Next.js, FastAPI, Supabase, and PostgreSQL.",
     url: "https://mwadev.me",
     siteName: "mwadev.me",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og?title=AI%20Full-Stack%20Developer&subtitle=Next.js%20%E2%80%A2%20FastAPI%20%E2%80%A2%20Supabase",
+        width: 1200,
+        height: 630,
+        alt: "MWA Dev - AI Full-Stack Developer",
+      },
+    ],
   },
   twitter: {
-    title: "Muhammed Waqar Ahmed",
-    description: "Personal website showcasing my development journey and projects",
+    card: "summary_large_image",
+    title: "AI Full-Stack Developer for Hire | Next.js, FastAPI, Supabase",
+    description: "Building scalable web and AI products for remote clients worldwide.",
     creator: "@mwadev",
+    images: ["/og?title=AI%20Full-Stack%20Developer&subtitle=Remote%20Contract%20%26%20Job%20Opportunities"],
   },
 };
 

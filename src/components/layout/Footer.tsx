@@ -42,12 +42,12 @@ const Footer = () => {
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold">Muhammed Waqar Ahmed</h3>
-                                <p className="text-sm text-gray-400">Learning, building, evolving — in code and in life</p>
+                                <p className="text-sm text-gray-400">Remote AI and full-stack developer for startups and growing teams</p>
                             </div>
                         </motion.div>
                         <p className="text-gray-300 mb-4 max-w-md">
-                            Following my journey from student to professional developer.
-                            Building, learning, and sharing experiences in web development, AI, and IoT.
+                            I help founders and teams ship reliable products with Next.js, FastAPI, Supabase, and PostgreSQL.
+                            Available for contract projects and long-term remote roles.
                         </p>
                         <div className="flex items-center text-sm text-gray-400">
                             <span>Made with</span>
