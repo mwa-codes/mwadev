@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Code, Brain, Smartphone, Database, Globe, Users, CheckCircle, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const ServicesSection = () => {
     const services = [
@@ -9,6 +10,7 @@ const ServicesSection = () => {
             id: "web-development",
             title: "Full-Stack Web Development",
             description: "Custom web applications built with modern technologies like Next.js, React, and Node.js. From simple websites to complex enterprise solutions.",
+            href: "/services/nextjs-development",
             icon: Globe,
             features: [
                 "Responsive & Mobile-First Design",
@@ -27,6 +29,7 @@ const ServicesSection = () => {
             id: "ai-solutions",
             title: "AI & Machine Learning Solutions",
             description: "Intelligent applications using OpenAI, custom ML models, and automation tools. Turn your data into actionable insights.",
+            href: "/services/ai-development",
             icon: Brain,
             features: [
                 "AI Chatbots & Virtual Assistants",
@@ -45,6 +48,7 @@ const ServicesSection = () => {
             id: "mobile-apps",
             title: "Mobile App Development",
             description: "Cross-platform mobile applications with native performance. Built with React Native and modern mobile development practices.",
+            href: "/services",
             icon: Smartphone,
             features: [
                 "iOS & Android Development",
@@ -63,6 +67,7 @@ const ServicesSection = () => {
             id: "erp-systems",
             title: "Custom ERP & Business Systems",
             description: "Lightweight, modular ERP systems designed for small to medium businesses. Streamline operations and replace manual processes.",
+            href: "/services/supabase-development",
             icon: Database,
             features: [
                 "Inventory Management",
@@ -81,6 +86,7 @@ const ServicesSection = () => {
             id: "consulting",
             title: "Technical Consulting & Code Review",
             description: "Strategic guidance on technology decisions, code architecture review, and mentoring for development teams.",
+            href: "/services",
             icon: Users,
             features: [
                 "Architecture Planning",
@@ -99,6 +105,7 @@ const ServicesSection = () => {
             id: "maintenance",
             title: "Website Maintenance & Support",
             description: "Ongoing support, updates, and maintenance for existing web applications. Keep your digital assets running smoothly.",
+            href: "/services",
             icon: Code,
             features: [
                 "Regular Updates & Security Patches",
@@ -215,7 +222,9 @@ const ServicesSection = () => {
                             </div>
 
                             <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-3">
-                                {service.title}
+                                <Link href={service.href} className="hover:underline">
+                                    {service.title}
+                                </Link>
                             </h3>
 
                             <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4">
@@ -241,10 +250,10 @@ const ServicesSection = () => {
                                     <span className="font-semibold text-gray-900 dark:text-white">{service.deliveryTime}</span>
                                 </div>
                                 <a
-                                    href="#projects"
+                                    href={service.href}
                                     className="inline-flex items-center mt-3 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline"
                                 >
-                                    See related project examples
+                                    View service landing page
                                 </a>
                             </div>
                         </motion.div>
@@ -300,12 +309,12 @@ const ServicesSection = () => {
                     </motion.p>
                     <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
                         <motion.a
-                            href="#contact"
+                            href="/services"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                         >
-                            Get Free Consultation
+                            View all services
                             <ArrowRight className="ml-2 w-4 h-4" />
                         </motion.a>
                         <motion.a

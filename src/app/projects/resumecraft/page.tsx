@@ -2,9 +2,8 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import Link from 'next/link';
-import Image from 'next/image';
 import { projects } from '@/data/projects';
+import ProjectCaseStudy from '@/components/sections/ProjectCaseStudy';
 
 export const metadata: Metadata = {
     title: 'ResumeCraft — AI Resume Builder | Next.js, FastAPI, Supabase',
@@ -33,44 +32,29 @@ export default function Page() {
     return (
         <div className="min-h-screen bg-white dark:bg-gray-900">
             <Header />
-            <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <nav className="mb-6 text-sm">
-                    <Link href="/#projects" className="text-blue-600 hover:underline">← Back to projects</Link>
-                </nav>
-                {project && (
-                    <>
-                        <div className="mb-6">
-                            <Image src={project.image} alt={project.title} width={1024} height={576} className="rounded-lg w-full h-auto object-cover" />
-                        </div>
-                        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">{project.title}</h1>
-                        <p className="text-gray-700 dark:text-gray-300 mb-6">{project.description}</p>
-                        <div className="flex flex-wrap gap-2 mb-6">
-                            {project.tags.map(tag => (
-                                <span key={tag} className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">{tag}</span>
-                            ))}
-                        </div>
-                        <div className="mb-6">
-                            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Key Features</h2>
-                            <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
-                                {project.features.map((f, i) => (<li key={i}>{f}</li>))}
-                            </ul>
-                        </div>
-                        <div className="flex gap-3 mb-8">
-                            {project.github && <Link href={project.github} className="px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg">View Code</Link>}
-                            {project.demo && project.demo !== '#' && <Link href={project.demo} className="px-4 py-2 bg-blue-600 text-white rounded-lg">Live Demo</Link>}
-                        </div>
-                        {project.screenshots && project.screenshots.length > 0 && (
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                {project.screenshots.map((shot, i) => (
-                                    <div key={i} className="relative w-full h-40 sm:h-48 rounded overflow-hidden">
-                                        <Image src={shot.src} alt={shot.alt} fill className="object-cover" />
-                                    </div>
-                                ))}
-                            </div>
-                        )}
-                    </>
-                )}
-            </main>
+            {project && (
+                <ProjectCaseStudy
+                    project={project}
+                    eyebrow="Case Study"
+                    intro="ResumeCraft is a strong example of an AI-focused product where the goal was to turn a complex workflow into a clear, user-friendly experience."
+                    challengeTitle="The challenge"
+                    challengeBody="The product needed to guide users through resume analysis and feedback without making the experience feel overwhelming or technical."
+                    solutionTitle="The solution"
+                    solutionBody="I combined Next.js, FastAPI, Supabase, and OpenAI integration to create a responsive product flow that supports analysis, storage, and delivery."
+                    outcomeTitle="What this delivered"
+                    outcomeBullets={[
+                        'A clear proof point for AI product development',
+                        'A cleaner conversion story for job seekers and hiring managers',
+                        'A relevant landing page for Next.js and AI search intent',
+                    ]}
+                    primaryCtaLabel="Need an AI product like this?"
+                    primaryCtaHref="/#contact"
+                    proofLinks={[
+                        { label: 'View the AI development service page', href: '/services/ai-development' },
+                        { label: 'View the Next.js service page', href: '/services/nextjs-development' },
+                    ]}
+                />
+            )}
             <Footer />
             <Script id="schema-softwareapp" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }} />
         </div>

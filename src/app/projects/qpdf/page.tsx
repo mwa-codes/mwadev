@@ -1,10 +1,9 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import Header from '@/components/layout/Header';
-import Link from 'next/link';
-import Image from 'next/image';
 import { projects } from '@/data/projects';
 import Footer from '@/components/layout/Footer';
+import ProjectCaseStudy from '@/components/sections/ProjectCaseStudy';
 
 export const metadata: Metadata = {
     title: 'QPDF — AI PDF Chatbot | Next.js, FastAPI, OpenAI',
@@ -33,44 +32,29 @@ export default function Page() {
     return (
         <div className="min-h-screen bg-white dark:bg-gray-900">
             <Header />
-            <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <nav className="mb-6 text-sm">
-                    <Link href="/#projects" className="text-blue-600 hover:underline">← Back to projects</Link>
-                </nav>
-                {project && (
-                    <>
-                        <div className="mb-6">
-                            <Image src={project.image} alt={project.title} width={1024} height={576} className="rounded-lg w-full h-auto object-cover" />
-                        </div>
-                        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">{project.title}</h1>
-                        <p className="text-gray-700 dark:text-gray-300 mb-6">{project.description}</p>
-                        <div className="flex flex-wrap gap-2 mb-6">
-                            {project.tags.map(tag => (
-                                <span key={tag} className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">{tag}</span>
-                            ))}
-                        </div>
-                        <div className="mb-6">
-                            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Key Features</h2>
-                            <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
-                                {project.features.map((f, i) => (<li key={i}>{f}</li>))}
-                            </ul>
-                        </div>
-                        <div className="flex gap-3 mb-8">
-                            {project.github && <Link href={project.github} className="px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg">View Code</Link>}
-                            {project.demo && project.demo !== '#' && <Link href={project.demo} className="px-4 py-2 bg-blue-600 text-white rounded-lg">Live Demo</Link>}
-                        </div>
-                        {project.screenshots && project.screenshots.length > 0 && (
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                {project.screenshots.map((shot, i) => (
-                                    <div key={i} className="relative w-full h-40 sm:h-48 rounded overflow-hidden">
-                                        <Image src={shot.src} alt={shot.alt} fill className="object-cover" />
-                                    </div>
-                                ))}
-                            </div>
-                        )}
-                    </>
-                )}
-            </main>
+            {project && (
+                <ProjectCaseStudy
+                    project={project}
+                    eyebrow="Case Study"
+                    intro="QPDF shows how I turn a document-heavy use case into a product people can actually use and understand."
+                    challengeTitle="The challenge"
+                    challengeBody="The product had to extract and process PDF content, support semantic matching, and present answers in a simple interface users could trust."
+                    solutionTitle="The solution"
+                    solutionBody="I combined Next.js, FastAPI, PostgreSQL, and OpenAI to build a document question-answering flow that handles both frontend experience and backend retrieval logic."
+                    outcomeTitle="What this delivered"
+                    outcomeBullets={[
+                        'A strong example of AI chatbot and document workflow development',
+                        'A clear proof page for searchers comparing AI developer options',
+                        'Better internal SEO alignment with the AI development service page',
+                    ]}
+                    primaryCtaLabel="Need a document AI product?"
+                    primaryCtaHref="/#contact"
+                    proofLinks={[
+                        { label: 'View the AI development service page', href: '/services/ai-development' },
+                        { label: 'View the FastAPI service page', href: '/services/fastapi-development' },
+                    ]}
+                />
+            )}
             <Footer />
             <Script id="schema-softwareapp-qpdf" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }} />
         </div>

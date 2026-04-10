@@ -35,6 +35,29 @@ function getProjectRoutes(): string[] {
     return slugs;
 }
 
+function getServiceRoutes(): string[] {
+    const servicesRoot = path.join(process.cwd(), 'src/app/services');
+    if (!fs.existsSync(servicesRoot)) return [];
+    const entries = fs.readdirSync(servicesRoot, { withFileTypes: true });
+    const slugs: string[] = [];
+    for (const ent of entries) {
+        if (!ent.isDirectory()) continue;
+        const pageTsx = path.join(servicesRoot, ent.name, 'page.tsx');
+        const pageTs = path.join(servicesRoot, ent.name, 'page.ts');
+        if (fs.existsSync(pageTsx) || fs.existsSync(pageTs)) {
+            slugs.push(`/services/${ent.name}`);
+        }
+    }
+
+    const rootPage = path.join(servicesRoot, 'page.tsx');
+    const rootPageTs = path.join(servicesRoot, 'page.ts');
+    if (fs.existsSync(rootPage) || fs.existsSync(rootPageTs)) {
+        slugs.unshift('/services');
+    }
+
+    return slugs;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
     const siteUrl = 'https://mwadev.me';
     const now = new Date().toISOString();
@@ -42,6 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const staticRoutes = ['/', '/blog', '/resume.html'];
     const blogRoutes = getBlogRoutes();
     const projectRoutes = getProjectRoutes();
+    const serviceRoutes = getServiceRoutes();
 
     return [
         ...staticRoutes.map((route) => ({
@@ -61,6 +85,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: now,
             changeFrequency: 'monthly' as const,
             priority: 0.6,
+        })),
+        ...serviceRoutes.map((route) => ({
+            url: `${siteUrl}${route}`,
+            lastModified: now,
+            changeFrequency: 'monthly' as const,
+            priority: route === '/services' ? 0.9 : 0.75,
         })),
     ];
 }

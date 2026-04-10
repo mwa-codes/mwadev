@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Mail, Github, Linkedin, MessageCircle, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 const ContactSection = () => {
     const [formData, setFormData] = useState({
@@ -41,11 +42,23 @@ const ContactSection = () => {
             if (response.ok) {
                 setSubmitMessage(data.message);
                 setFormData({ name: "", email: "", subject: "", message: "" });
+                trackEvent('contact_form_submit', {
+                    channel: 'contact_form',
+                    status: 'success',
+                });
             } else {
                 setSubmitMessage(data.error || "Something went wrong. Please try again.");
+                trackEvent('contact_form_submit', {
+                    channel: 'contact_form',
+                    status: 'error',
+                });
             }
         } catch {
             setSubmitMessage("Network error. Please check your connection and try again.");
+            trackEvent('contact_form_submit', {
+                channel: 'contact_form',
+                status: 'network_error',
+            });
         } finally {
             setIsSubmitting(false);
         }
@@ -68,13 +81,15 @@ const ContactSection = () => {
             name: "WhatsApp",
             icon: MessageCircle,
             href: "https://wa.me/923016636557",
-            description: "Chat with me directly on WhatsApp"
+            description: "Chat with me directly on WhatsApp",
+            eventName: 'whatsapp_click',
         },
         {
             name: "Email",
             icon: Mail,
             href: "mailto:m.waqar.ahmed@gmail.com",
-            description: "Send me a direct message"
+            description: "Send me a direct message",
+            eventName: 'email_click',
         }
     ];
 
@@ -284,6 +299,10 @@ const ContactSection = () => {
                                     <motion.a
                                         key={link.name}
                                         href={link.href}
+                                        onClick={() => trackEvent(link.eventName ?? 'contact_link_click', {
+                                            channel: link.name.toLowerCase(),
+                                            location: 'contact_section',
+                                        })}
                                         whileHover={{ scale: 1.05, y: -2 }}
                                         whileTap={{ scale: 0.95 }}
                                         className="flex items-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors group"

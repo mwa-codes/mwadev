@@ -1,27 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { posts } from "@/data/posts";
 
-type Post = {
-    title: string;
-    slug: string;
-    excerpt: string;
-    date: string; // ISO
-    readingMinutes: number;
-    tags: string[];
+export const metadata: Metadata = {
+    title: "Blog | AI Development Tools and Full-Stack Engineering",
+    description: "Practical guides on AI development tools, Next.js, FastAPI, Supabase, and developer workflows.",
+    alternates: { canonical: "/blog" },
 };
 
-const posts: Post[] = [
-    {
-        title: "The Ultimate Guide to AI Development Tools",
-        slug: "ultimate-guide-ai-development-tools",
-        excerpt:
-            "A practical, up-to-date guide to AI development tools, AI-powered IDEs, GitHub Copilot vs. Tabnine, and the best AI tools for automating coding tasks.",
-        date: "2025-10-12",
-        readingMinutes: 10,
-        tags: ["AI", "Dev Tools", "Guide"],
-    },
-];
+const formatReadingTime = (title: string) => `${Math.max(5, Math.ceil(title.length / 14))} min read`;
 
 export default function BlogIndexPage() {
     return (
@@ -31,10 +20,10 @@ export default function BlogIndexPage() {
                 <header className="mb-10">
                     <p className="text-sm text-gray-500">Articles & Guides</p>
                     <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white mt-2">
-                        Blog
+                        AI, Next.js, FastAPI, and SEO Articles
                     </h1>
                     <p className="mt-3 text-gray-600 dark:text-gray-300 max-w-2xl">
-                        Deep dives on modern engineering, AI productivity, and developer workflows.
+                        These guides are written to attract the right kind of traffic: people searching for practical engineering advice and high-value development services.
                     </p>
                 </header>
 
@@ -48,15 +37,15 @@ export default function BlogIndexPage() {
                                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-2xl" />
                             </div>
                             <div className="flex items-center text-xs text-gray-500 dark:text-gray-400 gap-3">
-                                <time dateTime={post.date}>
-                                    {new Date(post.date).toLocaleDateString(undefined, {
+                                <time dateTime={post.publishedAt}>
+                                    {new Date(post.publishedAt).toLocaleDateString(undefined, {
                                         year: "numeric",
                                         month: "short",
                                         day: "2-digit",
                                     })}
                                 </time>
                                 <span>•</span>
-                                <span>{post.readingMinutes} min read</span>
+                                <span>{formatReadingTime(post.title)}</span>
                             </div>
                             <h2 className="mt-3 text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white">
                                 <Link
@@ -67,10 +56,10 @@ export default function BlogIndexPage() {
                                 </Link>
                             </h2>
                             <p className="mt-2 text-gray-600 dark:text-gray-300">
-                                {post.excerpt}
+                                {post.description}
                             </p>
                             <div className="mt-4 flex flex-wrap gap-2">
-                                {post.tags.map((tag) => (
+                                {['AI', 'Next.js', 'FastAPI'].map((tag) => (
                                     <span
                                         key={tag}
                                         className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-200"

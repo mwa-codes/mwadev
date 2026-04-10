@@ -2,54 +2,11 @@
 
 import { motion } from "framer-motion";
 import { Calendar, Clock, ArrowRight, Tag, BookOpen } from "lucide-react";
+import { posts } from "@/data/posts";
 
 const BlogSection = () => {
-    const blogPosts = [
-        {
-            id: "getting-started-nextjs",
-            title: "Getting Started with Next.js 15: A Student's Journey",
-            excerpt: "My experience learning Next.js 15 and the new features that make modern web development more accessible for beginners.",
-            date: "2024-01-15",
-            readTime: "5 min read",
-            tags: ["Next.js", "React", "Learning", "Web Development"],
-            category: "Learning",
-            slug: "getting-started-nextjs",
-            featured: true
-        },
-        {
-            id: "ai-pdf-chatbot-journey",
-            title: "Building an AI PDF Chatbot: Lessons Learned",
-            excerpt: "Deep dive into the challenges and solutions while building an intelligent PDF processing chatbot using OpenAI and vector embeddings.",
-            date: "2024-01-10",
-            readTime: "8 min read",
-            tags: ["AI", "OpenAI", "Vector DB", "TypeScript"],
-            category: "Projects",
-            slug: "ai-pdf-chatbot-journey",
-            featured: false
-        },
-        {
-            id: "iot-home-automation",
-            title: "IoT Home Automation with Arduino and React",
-            excerpt: "How I built a smart home dashboard to control IoT devices using Arduino, MQTT, and a React frontend.",
-            date: "2024-01-05",
-            readTime: "6 min read",
-            tags: ["IoT", "Arduino", "React", "MQTT"],
-            category: "Experiments",
-            slug: "iot-home-automation",
-            featured: false
-        },
-        {
-            id: "student-to-developer-mindset",
-            title: "The Student to Developer Mindset Shift",
-            excerpt: "Reflections on transitioning from academic learning to practical development and the mental frameworks that help.",
-            date: "2024-01-01",
-            readTime: "4 min read",
-            tags: ["Career", "Learning", "Mindset", "Growth"],
-            category: "Thoughts",
-            slug: "student-to-developer-mindset",
-            featured: true
-        }
-    ];
+    const featuredPosts = posts.slice(0, 1);
+    const recentPosts = posts.slice(1);
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -78,6 +35,8 @@ const BlogSection = () => {
         });
     };
 
+    const formatReadingTime = (title: string) => `${Math.max(5, Math.ceil(title.length / 14))} min read`;
+
     return (
         <section id="blog" className="py-20 bg-gray-50 dark:bg-gray-800/50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -89,10 +48,10 @@ const BlogSection = () => {
                     className="text-center mb-16"
                 >
                     <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-                        Learning Blog & Notes
+                        SEO Articles & Practical Guides
                     </motion.h2>
                     <motion.p variants={itemVariants} className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                        Documenting my journey from student to professional developer, sharing lessons learned and experiments along the way
+                        Focused writing on AI development tools, full-stack delivery, and topics that attract real client and hiring-manager search intent.
                     </motion.p>
                 </motion.div>
 
@@ -106,18 +65,17 @@ const BlogSection = () => {
                 >
                     <motion.h3 variants={itemVariants} className="text-2xl font-bold text-gray-900 dark:text-white mb-8 flex items-center">
                         <BookOpen className="mr-3 text-blue-600" size={24} />
-                        Featured Posts
+                        Featured Article
                     </motion.h3>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        {blogPosts.filter(post => post.featured).map((post) => (
+                        {featuredPosts.map((post) => (
                             <motion.article
-                                key={post.id}
+                                key={post.slug}
                                 variants={itemVariants}
                                 whileHover={{ y: -5 }}
                                 className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
                             >
-                                {/* Featured Badge */}
                                 <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4">
                                     <span className="text-white text-sm font-medium">Featured Post</span>
                                 </div>
@@ -125,9 +83,9 @@ const BlogSection = () => {
                                 <div className="p-6">
                                     <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
                                         <Calendar size={16} className="mr-2" />
-                                        {formatDate(post.date)}
+                                        {formatDate(post.publishedAt)}
                                         <Clock size={16} className="ml-4 mr-2" />
-                                        {post.readTime}
+                                        {formatReadingTime(post.title)}
                                     </div>
 
                                     <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
@@ -135,11 +93,11 @@ const BlogSection = () => {
                                     </h4>
 
                                     <p className="text-gray-600 dark:text-gray-300 mb-4">
-                                        {post.excerpt}
+                                        {post.description}
                                     </p>
 
                                     <div className="flex flex-wrap gap-2 mb-4">
-                                        {post.tags.slice(0, 3).map((tag) => (
+                                        {['AI', 'Next.js', 'SEO'].map((tag) => (
                                             <span
                                                 key={tag}
                                                 className="inline-flex items-center px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full"
@@ -173,13 +131,13 @@ const BlogSection = () => {
                     viewport={{ once: true, amount: 0.3 }}
                 >
                     <motion.h3 variants={itemVariants} className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-                        Recent Posts
+                        More Reading
                     </motion.h3>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                        {blogPosts.filter(post => !post.featured).map((post) => (
+                        {recentPosts.length > 0 ? recentPosts.map((post) => (
                             <motion.article
-                                key={post.id}
+                                key={post.slug}
                                 variants={itemVariants}
                                 whileHover={{ y: -3 }}
                                 className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden"
@@ -187,11 +145,11 @@ const BlogSection = () => {
                                 <div className="p-6">
                                     <div className="flex items-center justify-between mb-3">
                                         <span className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded-full">
-                                            {post.category}
+                                            Guide
                                         </span>
                                         <div className="flex items-center text-xs text-gray-500 dark:text-gray-400">
                                             <Clock size={12} className="mr-1" />
-                                            {post.readTime}
+                                            {formatReadingTime(post.title)}
                                         </div>
                                     </div>
 
@@ -200,12 +158,12 @@ const BlogSection = () => {
                                     </h4>
 
                                     <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-3">
-                                        {post.excerpt}
+                                        {post.description}
                                     </p>
 
                                     <div className="flex items-center justify-between">
                                         <span className="text-xs text-gray-500 dark:text-gray-400">
-                                            {formatDate(post.date)}
+                                            {formatDate(post.publishedAt)}
                                         </span>
                                         <motion.a
                                             href={`/blog/${post.slug}`}
@@ -217,7 +175,11 @@ const BlogSection = () => {
                                     </div>
                                 </div>
                             </motion.article>
-                        ))}
+                        )) : (
+                            <div className="md:col-span-2 xl:col-span-3 rounded-xl border border-dashed border-gray-300 dark:border-gray-700 p-8 text-center text-gray-600 dark:text-gray-300">
+                                More SEO-focused guides are coming soon.
+                            </div>
+                        )}
                     </div>
                 </motion.div>
 

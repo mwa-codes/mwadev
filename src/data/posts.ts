@@ -10,6 +10,26 @@ export type Post = {
 
 export const posts: Post[] = [
     {
+        slug: 'hire-nextjs-developer-remote-contract-work',
+        title: 'Hire a Next.js Developer for Remote Contract Work',
+        description:
+            'What to look for when hiring a Next.js developer, how to evaluate delivery speed and SEO quality, and how to choose someone who can ship production-ready results.',
+        publishedAt: '2026-03-28',
+        modifiedAt: '2026-04-10',
+        ogTitle: 'Hire a Next.js Developer',
+        ogSubtitle: 'Remote contract work • SEO • Production delivery',
+    },
+    {
+        slug: 'fastapi-supabase-development-services',
+        title: 'FastAPI and Supabase Development: What to Hire For',
+        description:
+            'A practical guide to choosing FastAPI and Supabase for SaaS apps, APIs, and AI products, with advice on architecture, reliability, and scale.',
+        publishedAt: '2026-03-20',
+        modifiedAt: '2026-04-10',
+        ogTitle: 'FastAPI + Supabase Development',
+        ogSubtitle: 'API architecture • PostgreSQL • SaaS systems',
+    },
+    {
         slug: 'ultimate-guide-ai-development-tools',
         title: 'Ultimate Guide to AI Development Tools in 2025',
         description:
