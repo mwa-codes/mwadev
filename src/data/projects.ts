@@ -20,7 +20,7 @@ export const projects: Project[] = [
         title: 'Conslinq',
         description:
             'Conslinq is a live, tenant-aware immigration case management platform built for admins, vendors, resellers, team members, and clients to manage complete case workflows in one secure system.',
-        image: '/images/projects/conslinq.png',
+        image: '/images/projects/Conslinq.png',
         tags: ['Next.js', 'FastAPI', 'TypeScript', 'Supabase', 'PostgreSQL', 'Railway', 'Vercel', 'Resend'],
         category: 'web',
         status: 'live',
@@ -34,7 +34,7 @@ export const projects: Project[] = [
             'Operational diagnostics endpoints for environment and connectivity checks',
         ],
         screenshots: [
-            { src: '/images/projects/conslinq.png', alt: 'Conslinq login and product overview' },
+            { src: '/images/projects/Conslinq.png', alt: 'Conslinq login and product overview' },
         ],
     },
     {
