@@ -15,6 +15,32 @@ export type Project = {
 
 export const projects: Project[] = [
     {
+        id: 'ai-kit-tools',
+        slug: 'aikittools',
+        title: 'AI Kit Tools',
+        description:
+            'Free AI-powered career tools and utilities for job seekers and developers. Generate cover letters, optimize resume bullets, check ATS compatibility, prep for interviews, and access utility tools—all powered by OpenAI.',
+        image: '/images/projects/aikittools.png',
+        tags: ['Next.js', 'OpenAI', 'TypeScript', 'Tailwind CSS', 'SaaS'],
+        category: 'ai',
+        status: 'live',
+        github: 'https://github.com/mwa-codes/aikittools',
+        demo: 'https://www.aikittools.com',
+        features: [
+            'AI Cover Letter Generator',
+            'Resume Bullet Point Generator',
+            'ATS Resume Checker',
+            'Interview Question Generator',
+            'LinkedIn Summary Generator',
+            'AI Text Summarizer',
+            'Developer utilities (Word Counter, Case Converter, Invoice Generator, JSON Formatter, QR Code Generator)',
+            'No signup required - runs in browser',
+        ],
+        screenshots: [
+            { src: '/images/projects/aikittools.png', alt: 'AI Kit Tools interface' },
+        ],
+    },
+    {
         id: 'conslinq-case-management-platform',
         slug: 'conslinq',
         title: 'Conslinq',
