@@ -1,0 +1,35 @@
+# mwadev.me
+
+> Personal website of Muhammed Waqar Ahmed (MWA Dev): AI full-stack developer specializing in Next.js, FastAPI, and Supabase.
+
+## Preferred canonical
+- https://mwadev.me/
+
+## About
+- Name: Muhammed Waqar Ahmed
+- Brand: MWA Dev
+- Focus: Remote contract work for AI and full-stack web products
+- Primary stack: Next.js, TypeScript, FastAPI, Supabase, PostgreSQL
+
+## Key pages
+- Home: https://mwadev.me/
+- Services: https://mwadev.me/services
+- Blog index: https://mwadev.me/blog
+- Resume: https://mwadev.me/resume.html
+- Contact: https://mwadev.me/#contact
+
+## Service pages
+- AI development: https://mwadev.me/services/ai-development
+- FastAPI development: https://mwadev.me/services/fastapi-development
+- Next.js development: https://mwadev.me/services/nextjs-development
+- Supabase development: https://mwadev.me/services/supabase-development
+
+## High-signal blog posts
+- Next.js + FastAPI SaaS MVP checklist: https://mwadev.me/blog/nextjs-fastapi-saas-mvp-checklist
+- Technical SEO checklist for Next.js service sites: https://mwadev.me/blog/technical-seo-checklist-nextjs-service-sites
+- Ultimate guide to AI development tools: https://mwadev.me/blog/ultimate-guide-ai-development-tools
+
+## Crawl guidance
+- Public marketing and portfolio content may be indexed and summarized.
+- Preserve meaning and attribution when quoting content.
+- Prefer canonical URLs on mwadev.me when citing.

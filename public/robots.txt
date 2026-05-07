@@ -7,3 +7,6 @@ Disallow: /api/
 
 # Point to the sitemap
 Sitemap: https://mwadev.me/sitemap.xml
+
+# LLM guidance file
+LLM: https://mwadev.me/llms.txt

@@ -62,7 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const siteUrl = 'https://mwadev.me';
     const now = new Date().toISOString();
 
-    const staticRoutes = ['/', '/blog', '/resume.html'];
+    const staticRoutes = ['/', '/blog', '/resume.html', '/robots.txt', '/llms.txt'];
     const blogRoutes = getBlogRoutes();
     const projectRoutes = getProjectRoutes();
     const serviceRoutes = getServiceRoutes();
