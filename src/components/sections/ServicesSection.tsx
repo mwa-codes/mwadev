@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code, Brain, Smartphone, Database, Globe, Users, CheckCircle, ArrowRight } from "lucide-react";
+import { Code, Brain, Database, Globe, Users, CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const ServicesSection = () => {
@@ -43,25 +43,6 @@ const ServicesSection = () => {
             pricing: "Starting from $1,000",
             deliveryTime: "3-8 weeks",
             category: "ai"
-        },
-        {
-            id: "mobile-apps",
-            title: "Mobile App Development",
-            description: "Cross-platform mobile applications with native performance. Built with React Native and modern mobile development practices.",
-            href: "/services",
-            icon: Smartphone,
-            features: [
-                "iOS & Android Development",
-                "Cross-Platform Solutions",
-                "Native Performance",
-                "Push Notifications",
-                "Offline Functionality",
-                "App Store Deployment"
-            ],
-            technologies: ["React Native", "Expo", "Firebase", "TypeScript"],
-            pricing: "Starting from $2,000",
-            deliveryTime: "4-10 weeks",
-            category: "mobile"
         },
         {
             id: "erp-systems",

@@ -49,10 +49,11 @@ const HeroSection = () => {
                     {/* Main Heading */}
                     <motion.div variants={itemVariants} className="space-y-4">
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white">
-                            Hire a Remote Next.js and FastAPI Developer
+                            I Build AI-Powered Web Apps — Fast
                         </h1>
                         <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-medium max-w-4xl mx-auto px-4">
-                            I build production-ready SaaS and AI applications using Next.js, FastAPI, Supabase, and PostgreSQL for global remote clients.
+                            Next.js, FastAPI, and Supabase developer who ships production-ready
+                            products using AI-assisted workflows. Available for remote contract work.
                         </p>
                     </motion.div>
 
