@@ -10,6 +10,26 @@ export type Post = {
 
 export const posts: Post[] = [
     {
+        slug: 'technical-seo-checklist-nextjs-service-sites',
+        title: 'Technical SEO Checklist for Next.js Service Websites',
+        description:
+            'A practical SEO checklist for Next.js service websites: metadata, internal links, Core Web Vitals, and content structure that improves visibility.',
+        publishedAt: '2026-05-08',
+        modifiedAt: '2026-05-08',
+        ogTitle: 'Technical SEO for Next.js Sites',
+        ogSubtitle: 'Indexing • Core Web Vitals • Internal links',
+    },
+    {
+        slug: 'nextjs-fastapi-saas-mvp-checklist',
+        title: 'Next.js + FastAPI SaaS MVP Checklist (Before You Build)',
+        description:
+            'A founder-friendly checklist for planning a SaaS MVP with Next.js and FastAPI, with clear scope, architecture, and launch decisions.',
+        publishedAt: '2026-05-08',
+        modifiedAt: '2026-05-08',
+        ogTitle: 'Next.js + FastAPI MVP Checklist',
+        ogSubtitle: 'MVP scope • Backend choices • Launch mistakes',
+    },
+    {
         slug: 'hire-nextjs-developer-remote-contract-work',
         title: 'Hire a Next.js Developer for Remote Contract Work',
         description:

@@ -20,10 +20,10 @@ export default function BlogIndexPage() {
                 <header className="mb-10">
                     <p className="text-sm text-gray-500">Articles & Guides</p>
                     <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white mt-2">
-                        AI, Next.js, FastAPI, and SEO Articles
+                        Practical Engineering Notes and Build Guides
                     </h1>
                     <p className="mt-3 text-gray-600 dark:text-gray-300 max-w-2xl">
-                        These guides are written to attract the right kind of traffic: people searching for practical engineering advice and high-value development services.
+                        Clear, experience-based writeups on building real products with Next.js, FastAPI, AI features, and technical SEO.
                     </p>
                 </header>
 
