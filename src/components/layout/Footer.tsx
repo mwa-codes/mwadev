@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Heart, ArrowUp } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
     const scrollToTop = () => {
@@ -14,7 +15,6 @@ const Footer = () => {
     const footerLinks = {
         navigation: [
             { name: "Home", href: "/" },
-            { name: "Journey", href: "/#journey" },
             { name: "Projects", href: "/#projects" },
             { name: "Services", href: "/#services" },
             { name: "Contact", href: "/#contact" },
@@ -35,11 +35,17 @@ const Footer = () => {
                     <div className="md:col-span-2">
                         <motion.div
                             whileHover={{ scale: 1.05 }}
-                            className="flex items-center space-x-3 mb-4"
+                            className="flex items-center space-x-4 mb-4"
                         >
-                            <div className="w-12 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                                <span className="text-white font-bold text-lg">MWA</span>
-                            </div>
+                            <Link href="/" aria-label="Go to homepage">
+                                <Image
+                                    src="/logo.png"
+                                    alt="MWA Dev"
+                                    width={92}
+                                    height={92}
+                                    className="object-contain shrink-0"
+                                />
+                            </Link>
                             <div>
                                 <h3 className="text-xl font-bold">Muhammed Waqar Ahmed</h3>
                                 <p className="text-sm text-gray-400">Remote AI and full-stack developer for startups and growing teams</p>

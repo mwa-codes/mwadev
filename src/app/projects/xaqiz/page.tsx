@@ -11,6 +11,16 @@ export const metadata: Metadata = {
     description:
         'Xaqiz is a live anonymous confession platform with AI transformations into poetry, prophecies, stories, or rap. Built with Next.js, FastAPI, and Supabase.',
     alternates: { canonical: '/projects/xaqiz' },
+    openGraph: {
+        images: [
+            {
+                url: '/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'MWA Dev – AI Full-Stack Developer',
+            },
+        ],
+    },
 };
 
 const schema = {

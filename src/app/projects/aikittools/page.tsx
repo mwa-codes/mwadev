@@ -11,6 +11,16 @@ export const metadata: Metadata = {
     description:
         'AI Kit Tools is a free platform offering AI-powered career tools including cover letter generator, resume optimizer, ATS checker, interview prep, and developer utilities. No signup required, powered by OpenAI.',
     alternates: { canonical: '/projects/aikittools' },
+    openGraph: {
+        images: [
+            {
+                url: '/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'MWA Dev – AI Full-Stack Developer',
+            },
+        ],
+    },
 };
 
 const schema = {

@@ -10,6 +10,16 @@ export const metadata: Metadata = {
     description:
         'AI-powered resume builder using Next.js, FastAPI, and Supabase for secure, real-time resume guidance. Deployed on Vercel for global performance.',
     alternates: { canonical: '/projects/resumecraft' },
+    openGraph: {
+        images: [
+            {
+                url: '/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'MWA Dev – AI Full-Stack Developer',
+            },
+        ],
+    },
 };
 
 const schema = {

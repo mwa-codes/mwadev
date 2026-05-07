@@ -114,7 +114,7 @@ export const projects: Project[] = [
         description:
             'Production-ready AI Resume Analysis Platform with Guest Mode, user dashboards, and export features. Built with Next.js 15, OpenAI, Supabase, and Tailwind CSS.',
         image: '/images/projects/ResumeCraft.png',
-        tags: ['Next.js', 'Sass Development', 'Supabase', 'AI Development', 'Vercel'],
+        tags: ['Next.js', 'SaaS Development', 'Supabase', 'AI Development', 'Vercel'],
         category: 'ai',
         status: 'live',
         github: 'https://github.com/mwa-codes/ResumeCraft',

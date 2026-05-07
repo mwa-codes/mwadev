@@ -10,6 +10,16 @@ export const metadata: Metadata = {
     description:
         'QPDF lets you chat with PDFs using AI. Built with Next.js, FastAPI, PostgreSQL, and OpenAI for embeddings and semantic search.',
     alternates: { canonical: '/projects/qpdf' },
+    openGraph: {
+        images: [
+            {
+                url: '/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'MWA Dev – AI Full-Stack Developer',
+            },
+        ],
+    },
 };
 
 const schema = {

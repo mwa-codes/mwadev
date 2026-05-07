@@ -1,166 +1,87 @@
 # MUHAMMED WAQAR AHMED
-**Full-Stack Developer | AI Solutions Developer | Entrepreneur**
+**Full-Stack Developer | Next.js · FastAPI · Supabase · TypeScript**
 
-📧 m.waqar.ahmed@gmail.com | 🌐 mwadev.me | 💼 GitHub: github.com/mwa-codes
+m.waqar.ahmed@gmail.com • +92 301 6636557 • [linkedin.com/in/mwaqarahmed](https://linkedin.com/in/mwaqarahmed) • [mwadev.me](https://mwadev.me) • Gujranwala, Pakistan
 
 ---
 
 ## PROFESSIONAL SUMMARY
 
-Multi-faceted developer actively engaged in learning, building, freelancing, and entrepreneurship. Experienced in full-stack web development, AI solutions, and custom business systems. Successfully delivered projects ranging from AI-powered applications to enterprise resource planning systems. Proven ability to work across multiple phases simultaneously - from student learning to professional client services.
-
-**Core Competencies:**
-- Full-Stack Web Development (Next.js, React, Node.js, TypeScript)
-- AI & Machine Learning Integration (OpenAI, FastAPI, Vector Databases)
-- Database Design & Management (PostgreSQL, Supabase)
-- Business Systems Development (ERP, CRM, Automation)
-- Client Services & Project Management
-- Modern Development Practices (Git, Vercel, CI/CD)
+Results-driven Full-Stack Developer with 8+ years of combined experience in software development, specializing in modern web application architecture using **Next.js, FastAPI, and Supabase**. Proven track record of rapidly shipping production-ready MVPs and scalable SaaS platforms — from multi-tenant immigration case management to AI-powered tools for job seekers. Expert in AI-assisted development workflows (GitHub Copilot, Cursor, Claude Code) and AI integration (OpenAI, embeddings, RAG, semantic search). Experienced in managing the full SDLC — from requirements through CI/CD deployment on Vercel and Railway.
 
 ---
 
 ## TECHNICAL SKILLS
 
-**Frontend Development:**
-- React, Next.js 15, TypeScript, JavaScript (ES6+)
-- Tailwind CSS, Responsive Design, Framer Motion
-- Modern UI/UX Principles, Mobile-First Development
+**Frontend:** Next.js (App Router), React, TypeScript, Tailwind CSS, shadcn/ui, Framer Motion
 
-**Backend Development:**
-- Node.js, FastAPI, Python
-- RESTful APIs, Database Design
-- Authentication & Authorization, Security Best Practices
+**Backend:** FastAPI, Python, Node.js, REST APIs, async programming, .NET MVC
 
-**Databases & Cloud:**
-- PostgreSQL, Supabase, Vector Databases
-- Vercel, Cloud Deployment, Environment Management
-- Database Optimization, Row Level Security
+**Database:** Supabase (Auth / DB / Storage / RLS), PostgreSQL, MongoDB
 
-**AI & Machine Learning:**
-- OpenAI API Integration, GPT-4, Language Models
-- Vector Embeddings, Semantic Search
-- Document Processing, NLP Applications
-- LangChain, AI Workflow Development
+**AI / ML:** OpenAI API, GPT-4, Vector Embeddings, Semantic Search, RAG, LangChain, Document Processing, Prompt Engineering
 
-**Business & Tools:**
-- Git Version Control, GitHub
-- Project Management, Client Communication
-- WordPress Development, CMS Integration
-- Email Services (Resend), Form Handling
+**DevOps:** Vercel, Railway, CI/CD pipelines, Git, GitHub, Resend
 
----
+**AI Dev Tools:** GitHub Copilot, Cursor, Claude Code — vibe coding for rapid MVP delivery
 
-## KEY PROJECTS
-
-### **QPDF - AI PDF Chatbot Platform** | *Live Production*
-**Technologies:** Next.js, OpenAI, FastAPI, PostgreSQL, Vector Databases
-- Developed full-stack AI application enabling natural language interaction with PDF documents
-- Implemented document chunking, vector embeddings, and semantic search functionality
-- Built real-time chat interface with context-aware response generation
-- **Impact:** Streamlined document analysis process for students, researchers, and professionals
-- **Live Demo:** https://www.qpdf.tech
-
-### **ResumeCraft - AI Resume Analysis Platform** | *Live Production*
-**Technologies:** Next.js 15, OpenAI GPT-4, Supabase, TypeScript, Tailwind CSS
-- Created comprehensive AI-driven resume analysis platform with dual-mode functionality
-- Developed Guest Mode for instant analysis and User Account system with dashboards
-- Implemented progress tracking, analysis history, and PDF/text export features
-- **Business Impact:** Delivered production-ready solution saving clients 97%+ over custom development
-- **Live Demo:** https://resumecraft-rose.vercel.app
-
-### **AI Math Teaching Assistant** | *Live Production*
-**Technologies:** WordPress, OpenAI API, PHP, Responsive Design
-- Built WordPress-integrated AI assistant for solving complex math problems
-- Developed step-by-step explanation system covering basic arithmetic to advanced calculus
-- Created intuitive interface with customizable lessons and real-time feedback
-- **Educational Impact:** Scalable platform for personalized math tutoring
-- **Live Demo:** https://artinvtech.com/math-ai/
-
-### **BartanERP - Lightweight Manufacturing ERP** | *In Development*
-**Technologies:** React, PostgreSQL, FastAPI, Tailwind CSS
-- Designing modular ERP system for small-scale manufacturing units (aluminum utensils)
-- Developing modules for inventory, employee management, and production tracking
-- Creating streamlined workflow to replace manual record-keeping processes
-- **Business Focus:** Tailored solution for manufacturing operations optimization
+**Other:** WordPress, Machine Learning (Google certifications)
 
 ---
 
 ## PROFESSIONAL EXPERIENCE
 
-### **Freelance Full-Stack Developer & AI Solutions Consultant** | *2024 - Present*
-- Deliver custom web applications and AI solutions for diverse client base
-- Specialize in Next.js applications, AI integrations, and business automation
-- Manage complete project lifecycle from requirements gathering to deployment
-- **Services:** Web Development, AI Solutions, ERP Systems, Technical Consulting
+### Full-Stack Developer | Freelance / Self-Employed
+*Jan 2025 – Present*
+- Designed, built, and deployed multiple production AI products under the **mwadev** umbrella — including **AIKitTools** (free AI career toolkit) and **QPDF** (AI PDF chatbot) — owning the full stack from architecture to deployment.
+- Architected custom FastAPI backends to automate data processing workflows, reducing manual operations effort by significant hours per week for small business clients.
+- Built showcase and client projects integrating Supabase, MongoDB, and modern React patterns to demonstrate full-stack proficiency.
+- Leveraged AI development tools (GitHub Copilot, Cursor, Claude Code) to accelerate delivery timelines and ship production-ready MVPs efficiently.
 
-### **Independent Developer & Entrepreneur** | *2023 - Present*
-- Build and deploy production-ready applications serving real users
-- Develop SaaS solutions with focus on AI-powered business tools
-- Handle technical architecture, user experience design, and business development
-- **Focus Areas:** Educational Technology, Business Automation, AI Applications
+### Center Manager | Aptech Learning Gujranwala
+*Jun 2022 – Sep 2024*
+- Managed day-to-day operations of a computer science education center, overseeing student enrollment, faculty coordination, and curriculum delivery.
+- Concurrently pursued a BS in Data Science (Virtual University of Pakistan) and completed multiple Google machine learning certifications.
 
----
-
-## SERVICES & EXPERTISE
-
-**Full-Stack Web Development**
-- Custom web applications with modern JavaScript frameworks
-- Responsive design, database integration, API development
-- Starting from $1,500 | Timeline: 2-6 weeks
-
-**AI & Machine Learning Solutions**
-- AI chatbots, document processing, automation workflows
-- Custom AI integrations and data analysis tools
-- Starting from $2,000 | Timeline: 3-8 weeks
-
-**Custom Business Systems**
-- ERP systems, inventory management, workflow automation
-- Tailored solutions for small to medium businesses
-- Starting from $5,000 | Timeline: 6-12 weeks
+### .NET & WordPress Developer | Gresys Technologies Pvt. Ltd.
+*Feb 2016 – Feb 2018*
+- Developed Windows desktop applications using .NET MVC architecture, delivering business management solutions for local clients.
+- Built and customized WordPress websites including theme creation, plugin integration, and full site deployments for multiple clients.
 
 ---
 
-## EDUCATION & CONTINUOUS LEARNING
+## KEY PROJECTS
 
-**Self-Directed Technology Education** | *Ongoing*
-- Focused on modern web development, AI/ML technologies, and business systems
-- Continuous learning through project-based development and real-world applications
-- Active engagement with latest technologies: Next.js 15, OpenAI GPT-4, Modern deployment practices
+### Consulinq — Immigration SaaS Platform &nbsp;·&nbsp; *Live*
+Production multi-tenant SaaS with RLS-enforced data isolation, RBAC dashboards for 5 user roles, document workflow tracking, and async case management APIs. Full CI/CD on Vercel + Railway.
+**Stack:** Next.js · FastAPI · Supabase · PostgreSQL · TypeScript &nbsp;·&nbsp; **Live:** [consulinq.com](https://www.consulinq.com)
 
-**Areas of Active Learning:**
-- Advanced AI/ML Applications
-- Enterprise System Architecture
-- Business Process Optimization
-- Modern Development Frameworks
+### AIKitTools — Free AI Career Toolkit &nbsp;·&nbsp; *Live*
+AI-powered career tools for job seekers and developers — cover letter generator, resume bullet optimizer, ATS compatibility checker, interview prep, LinkedIn summary generator, and developer utilities. No-signup, browser-based.
+**Stack:** Next.js · OpenAI · TypeScript · Tailwind CSS &nbsp;·&nbsp; **Live:** [aikittools.com](https://www.aikittools.com)
 
----
+### QPDF — AI PDF Chatbot &nbsp;·&nbsp; *Live*
+Full-stack AI app enabling natural-language interaction with PDF documents. Implemented document chunking, vector embeddings, semantic search, and a real-time chat interface with context-aware responses.
+**Stack:** Next.js · OpenAI · FastAPI · PostgreSQL · Vector DB &nbsp;·&nbsp; **Live:** [qpdf.tech](https://www.qpdf.tech)
 
-## ACHIEVEMENTS & IMPACT
+### ResumeCraft — AI Resume Analysis Platform &nbsp;·&nbsp; *Live*
+Production AI resume analysis platform with Guest Mode, authenticated user dashboards, analysis history, and PDF/text export.
+**Stack:** Next.js 15 · OpenAI GPT-4 · Supabase · TypeScript · Tailwind &nbsp;·&nbsp; **Live:** [resumecraft-rose.vercel.app](https://resumecraft-rose.vercel.app)
 
-- ✅ **Production Applications:** Multiple live applications serving real users
-- ✅ **Client Satisfaction:** Delivered solutions saving clients 97%+ development costs
-- ✅ **Technical Breadth:** Successfully working across web, AI, mobile, and enterprise domains
-- ✅ **Business Acumen:** Active in multiple phases - learning, building, freelancing, entrepreneurship
-- ✅ **Modern Stack:** Proficient with latest technologies and deployment practices
-- ✅ **Problem Solving:** Track record of turning complex requirements into functional solutions
+### BartanERP — Lightweight Manufacturing ERP &nbsp;·&nbsp; *In Development*
+Modular ERP for small-scale manufacturing units (aluminum utensil factories). Modules for inventory, attendance, production tracking, and reporting — replacing manual record-keeping.
+**Stack:** React · PostgreSQL · FastAPI · Tailwind CSS
 
 ---
 
-## LANGUAGES & COMMUNICATION
+## EDUCATION
 
-- **English:** Professional working proficiency
-- **Technical Communication:** Excellent written and verbal skills for client interaction
-- **Documentation:** Strong ability to create clear technical documentation and user guides
+**BS Computer Science** | Virtual University of Pakistan &nbsp;·&nbsp; *Sep 2024 – May 2028*
 
----
-
-## AVAILABILITY & WORK APPROACH
-
-**Current Status:** Available for freelance projects and consultations
-**Work Style:** Remote-first with flexible scheduling
-**Project Approach:** Agile methodology with regular client communication and milestone updates
-**Response Time:** Usually within 24 hours for inquiries
+**Diploma in Computer Science** | Aptech Pakistan &nbsp;·&nbsp; *Aug 2023*
 
 ---
 
-*This resume reflects my current multi-phase approach to development - simultaneously learning, building, freelancing, and growing as an entrepreneur in the technology space.*
+## CERTIFICATIONS
+
+**Google / Coursera:** Get Started with Python · The Nuts and Bolts of Machine Learning · The Power of Statistics · Prompt Engineering · Diploma in Information Systems Management

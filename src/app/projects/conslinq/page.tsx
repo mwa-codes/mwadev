@@ -10,6 +10,16 @@ export const metadata: Metadata = {
     description:
         'Conslinq is a live, tenant-aware immigration case management platform built with Next.js, FastAPI, Supabase PostgreSQL, Railway, and Vercel.',
     alternates: { canonical: '/projects/conslinq' },
+    openGraph: {
+        images: [
+            {
+                url: '/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'MWA Dev – AI Full-Stack Developer',
+            },
+        ],
+    },
 };
 
 const schema = {

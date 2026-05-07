@@ -36,6 +36,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   robots: {
     index: true,
     follow: true,
@@ -56,10 +60,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og?title=AI%20Full-Stack%20Developer&subtitle=Next.js%20%E2%80%A2%20FastAPI%20%E2%80%A2%20Supabase",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "MWA Dev - AI Full-Stack Developer",
+        alt: "MWA Dev – AI Full-Stack Developer | Next.js · FastAPI · Supabase",
       },
     ],
   },
@@ -68,7 +72,7 @@ export const metadata: Metadata = {
     title: "AI Full-Stack Developer for Hire | Next.js, FastAPI, Supabase",
     description: "Building scalable web and AI products for remote clients worldwide.",
     creator: "@mwadev",
-    images: ["/og?title=AI%20Full-Stack%20Developer&subtitle=Remote%20Contract%20%26%20Job%20Opportunities"],
+    images: ["/og-image.png"],
   },
 };
 

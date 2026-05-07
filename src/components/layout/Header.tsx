@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Menu, X, Moon, Sun } from "lucide-react";
 import { useTheme } from "@/lib/theme";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
@@ -26,7 +27,6 @@ export default function Header() {
     // Dynamic navigation based on current page
     const navItems = isHomePage ? [
         { name: "About", href: "#about" },
-        { name: "Journey", href: "#journey" },
         { name: "Projects", href: "#projects" },
         { name: "Services", href: "#services" },
         { name: "Contact", href: "#contact" },
@@ -34,7 +34,6 @@ export default function Header() {
     ] : [
         { name: "Home", href: "/" },
         { name: "About", href: "/#about" },
-        { name: "Journey", href: "/#journey" },
         { name: "Projects", href: "/#projects" },
         { name: "Services", href: "/#services" },
         { name: "Contact", href: "/#contact" },
@@ -71,20 +70,25 @@ export default function Header() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center py-4">
                     {/* Logo */}
-                    <Link href="/">
+                    <Link href="/" aria-label="Go to homepage">
                         <motion.div
                             whileHover={{ scale: 1.05 }}
-                            className="flex items-center space-x-2 cursor-pointer"
+                            className="flex items-center gap-4 cursor-pointer"
                         >
-                            <div className="w-12 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                                <span className="text-white font-bold text-sm">MWA</span>
-                            </div>
-                            <div className="hidden sm:block">
-                                <h1 className="text-xl font-bold text-gray-900 dark:text-white">
+                            <Image
+                                src="/logo.png"
+                                alt="MWA Dev Logo"
+                                width={92}
+                                height={92}
+                                className="object-contain shrink-0"
+                                priority
+                            />
+                            <div className="hidden md:block">
+                                <h1 className="text-xl font-bold text-gray-900 dark:text-white leading-tight">
                                     Muhammed Waqar Ahmed
                                 </h1>
-                                <p className="text-xs text-gray-600 dark:text-gray-400">
-                                    Learning, building, evolving — in code and in life
+                                <p className="text-xs text-gray-600 dark:text-gray-400 leading-tight">
+                                    Learning, building, evolving - in code and in life.
                                 </p>
                             </div>
                         </motion.div>

@@ -11,6 +11,16 @@ export const metadata: Metadata = {
     description:
         'An AI-powered Math Teaching Assistant for WordPress using OpenAI API. Solves and explains topics from arithmetic to calculus with real-time feedback.',
     alternates: { canonical: '/projects/math-tutor' },
+    openGraph: {
+        images: [
+            {
+                url: '/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'MWA Dev – AI Full-Stack Developer',
+            },
+        ],
+    },
 };
 
 const schema = {

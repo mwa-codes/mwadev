@@ -11,6 +11,16 @@ export const metadata: Metadata = {
     description:
         'BartanERP streamlines operations for small manufacturers with modules for attendance, inventory, orders, and reporting. Built with React, FastAPI, and PostgreSQL.',
     alternates: { canonical: '/projects/bartanerp' },
+    openGraph: {
+        images: [
+            {
+                url: '/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'MWA Dev – AI Full-Stack Developer',
+            },
+        ],
+    },
 };
 
 const schema = {

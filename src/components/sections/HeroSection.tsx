@@ -37,12 +37,12 @@ const HeroSection = () => {
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
-                    className="space-y-8"
+                    className="space-y-8 pt-28 md:pt-20"
                 >
                     {/* Profile Image Placeholder */}
                     <motion.div variants={itemVariants} className="flex justify-center">
-                        <div className="w-32 h-32 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-2xl">
-                            <Code2 size={48} className="text-white" />
+                        <div className="w-28 h-28 sm:w-32 sm:h-32 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-2xl ring-4 ring-white/70 dark:ring-gray-900/60">
+                            <Code2 size={44} className="text-white" />
                         </div>
                     </motion.div>
 
@@ -88,7 +88,7 @@ const HeroSection = () => {
                             href="#contact"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-center"
+                            className="w-full sm:w-auto px-8 sm:px-10 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg text-base sm:text-lg font-bold shadow-xl hover:shadow-2xl transition-all duration-300 text-center"
                         >
                             Discuss Your Project
                         </motion.a>
@@ -98,13 +98,13 @@ const HeroSection = () => {
                             whileTap={{ scale: 0.95 }}
                             className="w-full sm:w-auto px-6 sm:px-8 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300 text-center"
                         >
-                            View Case Studies
+                            View Projects
                         </motion.a>
                         <motion.a
                             href="/resume.html"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="w-full sm:w-auto px-6 sm:px-8 py-3 border-2 border-blue-600 text-blue-700 dark:text-blue-300 rounded-lg font-semibold hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300 text-center"
+                            className="text-sm sm:text-base font-medium text-blue-700 dark:text-blue-300 underline underline-offset-4 hover:text-blue-800 dark:hover:text-blue-200 transition-colors"
                         >
                             Download Resume
                         </motion.a>
@@ -131,17 +131,14 @@ const HeroSection = () => {
                     </motion.div>
 
                     {/* Scroll Indicator */}
-                    <motion.div
-                        variants={itemVariants}
-                        className="absolute bottom--1 left-1/2 transform -translate-x-1/2"
-                    >
+                    <motion.div variants={itemVariants} className="pt-2 pb-4">
                         <motion.div
                             animate={{ y: [0, 10, 0] }}
                             transition={{ repeat: Infinity, duration: 2 }}
-                            className="flex flex-col items-center text-gray-400 dark:text-gray-600"
+                            className="flex flex-col items-center text-gray-800 dark:text-gray-200"
                         >
-                            <span className="text-sm mb-2">Scroll to explore</span>
-                            <ArrowDown size={20} />
+                            <span className="text-sm font-medium mb-2">Scroll to explore</span>
+                            <ArrowDown size={24} className="drop-shadow-sm" />
                         </motion.div>
                     </motion.div>
                 </motion.div>
