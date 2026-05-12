@@ -201,15 +201,30 @@
             .project {
                 break-inside: avoid;
             }
-            .download-btn, .back-btn {
+            .resume-toolbar, .back-btn {
                 display: none;
             }
         }
 
-        .download-btn {
+        .resume-toolbar {
             position: fixed;
             top: 20px;
             right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+            align-items: flex-end;
+        }
+
+        @media (min-width: 640px) {
+            .resume-toolbar {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        .download-btn {
             background: linear-gradient(135deg, #2563eb, #7c3aed);
             color: white;
             border: none;
@@ -219,12 +234,22 @@
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            z-index: 1000;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.95rem;
         }
 
         .download-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        .download-btn.secondary {
+            background: linear-gradient(135deg, #64748b, #475569);
+        }
+
+        .download-btn.secondary:hover {
+            box-shadow: 0 6px 20px rgba(71, 85, 105, 0.45);
         }
 
         .back-btn {
@@ -252,35 +277,39 @@
 </head>
 <body>
     <a href="/" class="back-btn">← Back to Site</a>
-    <button onclick="downloadAsPDF()" class="download-btn">📄 Download as PDF</button>
+    <div class="resume-toolbar">
+        <a href="/Muhammed_Waqar_Ahmed_CV.pdf" download="Muhammed_Waqar_Ahmed_CV.pdf" class="download-btn">Download CV (PDF)</a>
+        <button type="button" onclick="downloadAsPDF()" class="download-btn secondary">Print / Save as PDF</button>
+    </div>
 
     <div class="header">
         <h1>MUHAMMED WAQAR AHMED</h1>
-        <div class="subtitle">Full-Stack Developer · Next.js · FastAPI · Supabase · TypeScript</div>
+        <div class="subtitle">Full-Stack Developer · Manufacturing Operations Manager</div>
         <div class="contact">
-            <a href="mailto:m.waqar.ahmed@gmail.com">m.waqar.ahmed@gmail.com</a> &nbsp;•&nbsp;
-            +92 301 6636557 &nbsp;•&nbsp;
-            <a href="https://linkedin.com/in/mwaqarahmed" target="_blank" rel="noopener">linkedin.com/in/mwaqarahmed</a> &nbsp;•&nbsp;
-            <a href="https://mwadev.me" target="_blank" rel="noopener">mwadev.me</a> &nbsp;•&nbsp;
-            Gujranwala, Pakistan
+            <a href="mailto:m.waqar.ahmed@gmail.com">m.waqar.ahmed@gmail.com</a> &nbsp;|&nbsp;
+            +92 301 663 6557 &nbsp;|&nbsp;
+            <a href="https://linkedin.com/in/mwaqarahmed" target="_blank" rel="noopener">linkedin.com/in/mwaqarahmed</a> &nbsp;|&nbsp;
+            <a href="https://mwadev.me" target="_blank" rel="noopener">mwadev.me</a>
+        </div>
+        <div class="contact" style="margin-top: 8px;">
+            Nationality: Pakistani &nbsp;|&nbsp; Gujranwala, Pakistan
         </div>
     </div>
 
     <div class="section">
         <h2>Professional Summary</h2>
-        <p>Results-driven Full-Stack Developer with <strong>8+ years</strong> of combined experience in software development, specializing in modern web application architecture using <strong>Next.js, FastAPI, and Supabase</strong>. Proven track record of rapidly shipping production-ready MVPs and scalable SaaS platforms — from multi-tenant immigration case management to AI-powered tools for job seekers. Expert in AI-assisted development workflows (GitHub Copilot, Cursor, Claude Code) and AI integration (OpenAI, embeddings, RAG, semantic search). Experienced in managing the full SDLC — from requirements through CI/CD deployment on Vercel and Railway.</p>
+        <p>Dual-discipline professional with <strong>8+ years</strong> in full-stack software development and <strong>7+ years</strong> managing an aluminium cookware manufacturing operation (<strong>Artisan Cookware</strong>, Gujranwala). As a developer, specialises in <strong>Next.js (App Router)</strong>, <strong>FastAPI</strong>, and <strong>Supabase</strong> — delivering production-ready SaaS platforms and AI-integrated web applications across the full SDLC. As a manufacturing operator, manages factory production, workforce, quality control, and supply chain. Proficient in AI-assisted development tooling (GitHub Copilot, Cursor, Claude Code).</p>
     </div>
 
     <div class="section">
         <h2>Technical Skills</h2>
         <div class="skills-grid">
-            <div class="skill-line"><strong>Frontend:</strong> Next.js (App Router), React, TypeScript, Tailwind CSS, shadcn/ui, Framer Motion</div>
-            <div class="skill-line"><strong>Backend:</strong> FastAPI, Python, Node.js, REST APIs, async, .NET MVC</div>
-            <div class="skill-line"><strong>Database:</strong> Supabase (Auth/DB/Storage/RLS), PostgreSQL, MongoDB</div>
-            <div class="skill-line"><strong>AI / ML:</strong> OpenAI API, GPT-4, Embeddings, Semantic Search, RAG, LangChain, Prompt Engineering</div>
-            <div class="skill-line"><strong>DevOps:</strong> Vercel, Railway, CI/CD, Git, GitHub, Resend</div>
-            <div class="skill-line"><strong>AI Dev Tools:</strong> GitHub Copilot, Cursor, Claude Code — vibe coding for rapid MVP delivery</div>
-            <div class="skill-line"><strong>Other:</strong> WordPress, Machine Learning (Google certified)</div>
+            <div class="skill-line"><strong>Frontend:</strong> Next.js (App Router), React, TypeScript, Tailwind CSS, shadcn/ui</div>
+            <div class="skill-line"><strong>Backend:</strong> FastAPI, Python, REST APIs, Async Programming, .NET MVC</div>
+            <div class="skill-line"><strong>Database:</strong> Supabase (Auth / DB / Storage / RLS), PostgreSQL, MongoDB</div>
+            <div class="skill-line"><strong>DevOps:</strong> Vercel, Railway, CI/CD Pipelines, Git, GitHub</div>
+            <div class="skill-line"><strong>AI Tools:</strong> GitHub Copilot, Cursor, Claude Code — AI-assisted rapid delivery</div>
+            <div class="skill-line"><strong>Other:</strong> WordPress, Machine Learning (Google Certified), Prompt Engineering</div>
         </div>
     </div>
 
@@ -288,28 +317,38 @@
         <h2>Professional Experience</h2>
 
         <div class="role-block">
-            <h3>Full-Stack Developer · Freelance / Self-Employed <span class="meta">| Jan 2025 – Present</span></h3>
+            <h3>Operations Manager | Artisan Cookware <span class="meta">| Feb 2018 – Present</span></h3>
+            <p class="role-sub"><a href="https://artisancookware.co" target="_blank" rel="noopener">artisancookware.co</a> — Aluminium Cookware Manufacturer, Gujranwala (Est. 1998)</p>
             <ul>
-                <li>Designed, built, and deployed multiple production AI products under the <strong>mwadev</strong> umbrella — including <strong>AIKitTools</strong> (free AI career toolkit) and <strong>QPDF</strong> (AI PDF chatbot) — owning the full stack from architecture to deployment.</li>
-                <li>Architected custom FastAPI backends to automate data processing workflows, reducing manual operations effort by significant hours per week for small business clients.</li>
-                <li>Built showcase and client projects integrating Supabase, MongoDB, and modern React patterns to demonstrate full-stack proficiency.</li>
-                <li>Leveraged AI development tools (GitHub Copilot, Cursor, Claude Code) to accelerate delivery timelines and ship production-ready MVPs efficiently.</li>
+                <li>Oversee end-to-end factory operations for a B2B aluminium cookware manufacturing business producing non-stick, metal finish, anodised, and gift set product lines for international wholesale and export markets.</li>
+                <li>Manage full production lifecycle: raw material procurement, forming and finishing, batch quality inspection, packaging, and on-time dispatch — maintaining 3–4 week lead times on container-load orders.</li>
+                <li>Drive international B2B sales: handle buyer inquiries, manage OEM/private label orders with custom branding, and coordinate FOB Karachi and CIF shipments.</li>
+                <li>Built and launched the company&apos;s B2B wholesale enquiry platform (<a href="https://artisancookware.co" target="_blank" rel="noopener">artisancookware.co</a>) using Next.js and Supabase — directly applying tech skills to digitise international sales operations.</li>
             </ul>
         </div>
 
         <div class="role-block">
-            <h3>Center Manager · Aptech Learning Gujranwala <span class="meta">| Jun 2022 – Sep 2024</span></h3>
+            <h3>Full-Stack Developer · Freelance / Self-Employed <span class="meta">| Jan 2025 – Present</span></h3>
             <ul>
-                <li>Managed day-to-day operations of a computer science education center, overseeing student enrollment, faculty coordination, and curriculum delivery.</li>
-                <li>Concurrently pursued a BS in Data Science (Virtual University of Pakistan) and completed multiple Google machine learning certifications.</li>
+                <li>Designed and deployed a full-stack e-commerce solution (Next.js + PostgreSQL) — handling the complete SDLC from client requirements through production launch on Vercel.</li>
+                <li>Architected a custom FastAPI backend automating data-processing workflows for a small business, eliminating multiple hours of manual operations weekly.</li>
+                <li>Delivered client projects integrating Supabase, MongoDB, and modern React patterns — consistently shipping production-ready MVPs within agreed timelines.</li>
+            </ul>
+        </div>
+
+        <div class="role-block">
+            <h3>Center Manager · Aptech Learning — Gujranwala <span class="meta">| Jun 2022 – Sep 2024</span></h3>
+            <ul>
+                <li>Managed full operations of a computer science education centre: student enrolment, faculty coordination, curriculum delivery, and centre performance.</li>
+                <li>Concurrently pursued BS in Data Science (Virtual University of Pakistan) and completed multiple Google-certified Machine Learning programmes.</li>
             </ul>
         </div>
 
         <div class="role-block">
             <h3>.NET &amp; WordPress Developer · Gresys Technologies Pvt. Ltd. <span class="meta">| Feb 2016 – Feb 2018</span></h3>
             <ul>
-                <li>Developed Windows desktop applications using .NET MVC architecture, delivering business management solutions for local clients.</li>
-                <li>Built and customized WordPress websites including theme creation, plugin integration, and full site deployments for multiple clients.</li>
+                <li>Developed Windows desktop business applications using .NET MVC architecture for local enterprise clients.</li>
+                <li>Built, customised, and deployed WordPress websites including theme development, plugin integration, and full-site management.</li>
             </ul>
         </div>
     </div>
@@ -319,20 +358,11 @@
 
         <div class="project">
             <div class="project-header">
-                <span class="project-title">Consulinq — Immigration SaaS Platform</span>
+                <span class="project-title">Consulinq — Immigration Case Management SaaS</span>
                 <span class="project-status">Live</span>
             </div>
-            <p>Production multi-tenant SaaS with RLS-enforced data isolation, RBAC dashboards for 5 user roles, document workflow tracking, and async case management APIs. Full CI/CD on Vercel + Railway.</p>
+            <p>Multi-tenant SaaS with strict Row-Level Security (RLS), Role-Based Access Control (RBAC) dashboards for Admins, Consultants, and Clients, async case management APIs, and document milestone tracking. Full CI/CD on Vercel + Railway. Currently in active use by immigration consultancies.</p>
             <div class="tech-stack">Next.js · FastAPI · Supabase · PostgreSQL · TypeScript &nbsp;·&nbsp; <a href="https://www.consulinq.com" target="_blank" rel="noopener">consulinq.com</a></div>
-        </div>
-
-        <div class="project">
-            <div class="project-header">
-                <span class="project-title">AIKitTools — Free AI Career Toolkit</span>
-                <span class="project-status">Live</span>
-            </div>
-            <p>AI-powered career tools for job seekers and developers — cover letter generator, resume bullet optimizer, ATS compatibility checker, interview prep, LinkedIn summary generator, and developer utilities. No-signup, browser-based.</p>
-            <div class="tech-stack">Next.js · OpenAI · TypeScript · Tailwind CSS &nbsp;·&nbsp; <a href="https://www.aikittools.com" target="_blank" rel="noopener">aikittools.com</a></div>
         </div>
 
         <div class="project">
@@ -340,38 +370,45 @@
                 <span class="project-title">QPDF — AI PDF Chatbot</span>
                 <span class="project-status">Live</span>
             </div>
-            <p>Full-stack AI app enabling natural-language interaction with PDF documents. Implemented document chunking, vector embeddings, semantic search, and a real-time chat interface with context-aware responses.</p>
-            <div class="tech-stack">Next.js · OpenAI · FastAPI · PostgreSQL · Vector DB &nbsp;·&nbsp; <a href="https://www.qpdf.tech" target="_blank" rel="noopener">qpdf.tech</a></div>
+            <p>Full-stack AI document assistant enabling natural language queries over PDFs. Extracts and chunks document content, generates vector embeddings, and semantically matches user queries to relevant sections. Features: file upload, smart chunking, and real-time chat interface.</p>
+            <div class="tech-stack">FastAPI · React · PostgreSQL · OpenAI API &nbsp;·&nbsp; <a href="https://www.qpdf.tech" target="_blank" rel="noopener">qpdf.tech</a></div>
         </div>
 
         <div class="project">
             <div class="project-header">
-                <span class="project-title">ResumeCraft — AI Resume Analysis Platform</span>
+                <span class="project-title">AI Resume Analysis Platform</span>
                 <span class="project-status">Live</span>
             </div>
-            <p>Production AI resume analysis platform with Guest Mode, authenticated user dashboards, analysis history, and PDF/text export.</p>
-            <div class="tech-stack">Next.js 15 · OpenAI GPT-4 · Supabase · TypeScript · Tailwind &nbsp;·&nbsp; <a href="https://resumecraft-rose.vercel.app" target="_blank" rel="noopener">resumecraft-rose.vercel.app</a></div>
+            <p>Production-ready SaaS with instant Guest Mode analysis for lead generation and a full User Account system with dashboards, progress tracking, analysis history, and PDF/text export. Built for career coaches, HR teams, and resume consultants. Delivered at 97%+ cost saving over custom development.</p>
+            <div class="tech-stack">Next.js 15 · OpenAI GPT-4 · Supabase · TypeScript · Tailwind CSS &nbsp;·&nbsp; <a href="https://resumecraft-rose.vercel.app" target="_blank" rel="noopener">ResumeCraft</a></div>
         </div>
 
         <div class="project">
             <div class="project-header">
-                <span class="project-title">BartanERP — Lightweight Manufacturing ERP</span>
-                <span class="project-status dev">In Development</span>
+                <span class="project-title">XAQIZ — Anonymous Confession Platform with AI Transformations</span>
+                <span class="project-status">Live</span>
             </div>
-            <p>Modular ERP for small-scale manufacturing units (aluminum utensil factories). Modules for inventory, attendance, production tracking, and reporting — replacing manual record-keeping.</p>
-            <div class="tech-stack">React · PostgreSQL · FastAPI · Tailwind CSS</div>
+            <p>Live SaaS (<a href="https://xaqiz.com" target="_blank" rel="noopener">xaqiz.com</a>) where users submit anonymous confessions and receive AI-generated transformations — dark poetry, short stories, or rap. End-to-end AI SaaS: secure anonymous data handling, OpenAI integration, scalable backend, modern frontend.</p>
+            <div class="tech-stack">Next.js · FastAPI · Supabase · OpenAI API</div>
         </div>
     </div>
 
     <div class="section">
         <h2>Education</h2>
-        <h3>BS Computer Science · Virtual University of Pakistan <span class="meta">| Sep 2024 – May 2028</span></h3>
-        <h3 style="margin-top: 8px;">Diploma in Computer Science · Aptech Pakistan <span class="meta">| Aug 2023</span></h3>
+        <h3>BS Computer Science · Virtual University of Pakistan <span class="meta">| Sep 2024 – Present</span></h3>
+        <h3 style="margin-top: 8px;">Diploma in Computer Science (3 Years) · Aptech Pakistan <span class="meta">| Aug 2020 – Aug 2023</span></h3>
     </div>
 
     <div class="section">
-        <h2>Certifications</h2>
-        <p><strong>Google / Coursera:</strong> Get Started with Python · The Nuts and Bolts of Machine Learning · The Power of Statistics · Prompt Engineering · Diploma in Information Systems Management</p>
+        <h2>Certifications &amp; Specializations</h2>
+        <h4>Specializations</h4>
+        <ul>
+            <li>Prompt Engineering Specialization — Vanderbilt University / Coursera</li>
+            <li>Google Advanced Data Analytics Professional Certificate — Google / Coursera</li>
+        </ul>
+        <p style="margin-top: 14px; font-size: 0.93em; color: #4b5563;">
+            References available upon request · Portfolio: <a href="https://mwadev.me" target="_blank" rel="noopener">mwadev.me</a> · GitHub: <a href="https://github.com/mwa-codes" target="_blank" rel="noopener">github.com/mwa-codes</a>
+        </p>
     </div>
 
     <script>

@@ -21,7 +21,7 @@ const Footer = () => {
             { name: "Blog", href: "/blog" },
         ],
         resources: [
-            { name: "Download Resume", href: "/resume.html" },
+            { name: "Resume", href: "/resume.html" },
             { name: "View Services", href: "#services" },
             { name: "Get In Touch", href: "#contact" },
         ]

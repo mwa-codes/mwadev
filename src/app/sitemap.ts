@@ -62,7 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const siteUrl = 'https://mwadev.me';
     const now = new Date().toISOString();
 
-    const staticRoutes = ['/', '/blog', '/resume.html', '/robots.txt', '/llms.txt'];
+    const staticRoutes = ['/', '/blog', '/resume.html', '/Muhammed_Waqar_Ahmed_CV.pdf', '/robots.txt', '/llms.txt'];
     const blogRoutes = getBlogRoutes();
     const projectRoutes = getProjectRoutes();
     const serviceRoutes = getServiceRoutes();
@@ -72,7 +72,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
             url: `${siteUrl}${route}`,
             lastModified: now,
             changeFrequency: 'weekly' as const,
-            priority: route === '/' ? 1.0 : route === '/resume.html' ? 0.7 : 0.8,
+            priority:
+                route === '/'
+                    ? 1.0
+                    : route === '/resume.html' || route === '/Muhammed_Waqar_Ahmed_CV.pdf'
+                      ? 0.7
+                      : 0.8,
         })),
         ...blogRoutes.map((route) => ({
             url: `${siteUrl}${route}`,

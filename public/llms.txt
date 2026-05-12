@@ -15,7 +15,7 @@
 - Home: https://mwadev.me/
 - Services: https://mwadev.me/services
 - Blog index: https://mwadev.me/blog
-- Resume: https://mwadev.me/resume.html
+- Resume (HTML): https://mwadev.me/resume.html — PDF download: https://mwadev.me/Muhammed_Waqar_Ahmed_CV.pdf
 - Contact: https://mwadev.me/#contact
 
 ## Service pages

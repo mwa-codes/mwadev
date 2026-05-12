@@ -106,7 +106,7 @@ const HeroSection = () => {
                             whileTap={{ scale: 0.95 }}
                             className="text-sm sm:text-base font-medium text-blue-700 dark:text-blue-300 underline underline-offset-4 hover:text-blue-800 dark:hover:text-blue-200 transition-colors"
                         >
-                            Download Resume
+                            Resume
                         </motion.a>
                     </motion.div>
 
