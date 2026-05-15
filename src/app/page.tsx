@@ -5,6 +5,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import JourneySection from "@/components/sections/JourneySection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import ServicesSection from "@/components/sections/ServicesSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import Script from 'next/script';
 
@@ -79,6 +80,7 @@ export default function Home() {
         <JourneySection />
         <ProjectsSection />
         <ServicesSection />
+        <TestimonialsSection />
         <ContactSection />
       </main>
       <Footer />
