@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: "AI Full-Stack Developer for Hire | Next.js, FastAPI, Supabase",
     template: "%s | MWA Dev",
   },
-  description: "Hire Muhammed Waqar Ahmed for remote full-stack and AI development. I build production-ready Next.js, FastAPI, and Supabase apps for startups and businesses worldwide.",
+  description: "Next.js, Supabase, and FastAPI developer with 5 live products shipped. I build production-ready SaaS MVPs and AI integrations for remote clients. Available for contract work.",
   keywords: [
     "hire next.js developer",
     "fastapi developer",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "AI Full-Stack Developer for Hire | Next.js, FastAPI, Supabase",
-    description: "Remote developer building high-performance web and AI products with Next.js, FastAPI, Supabase, and PostgreSQL.",
+    description: "Next.js, Supabase, and FastAPI developer with 5 live products shipped. I build production-ready SaaS MVPs and AI integrations for remote clients. Available for contract work.",
     url: "https://mwadev.me",
     siteName: "mwadev.me",
     locale: "en_US",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI Full-Stack Developer for Hire | Next.js, FastAPI, Supabase",
-    description: "Building scalable web and AI products for remote clients worldwide.",
+    description: "Next.js, Supabase, and FastAPI developer with 5 live products shipped. I build production-ready SaaS MVPs and AI integrations for remote clients. Available for contract work.",
     creator: "@mwadev",
     images: ["/og-image.png"],
   },

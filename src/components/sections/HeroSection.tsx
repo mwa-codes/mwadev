@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail, MessageCircle, Code2 } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Code2 } from "lucide-react";
 
 const HeroSection = () => {
     const containerVariants = {
@@ -52,8 +52,9 @@ const HeroSection = () => {
                             I Build AI-Powered Web Apps — Fast
                         </h1>
                         <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-medium max-w-4xl mx-auto px-4">
-                            Next.js, FastAPI, and Supabase developer who ships production-ready
-                            products using AI-assisted workflows. Available for remote contract work.
+                            From multi-tenant auth systems to AI document chatbots — I build<br />
+                            production-ready products for remote clients. Clear scope, 50% deposit,<br />
+                            weekly updates.
                         </p>
                     </motion.div>
 
@@ -115,7 +116,6 @@ const HeroSection = () => {
                         {[
                             { icon: Github, href: "https://github.com/mwa-codes", label: "GitHub" },
                             { icon: Linkedin, href: "https://www.linkedin.com/in/mwaqarahmed/", label: "LinkedIn" },
-                            { icon: MessageCircle, href: "https://wa.me/923016636557", label: "WhatsApp" },
                             { icon: Mail, href: "mailto:m.waqar.ahmed@gmail.com", label: "Email" },
                         ].map(({ icon: Icon, href, label }) => (
                             <motion.a

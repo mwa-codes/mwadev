@@ -85,7 +85,7 @@ const stats = [
     { value: "6", label: "Recommendations" },
     { value: "2", label: "Upwork Reviews" },
     { value: "5.0", label: "Average Rating" },
-    { value: "10+", label: "Years Experience" },
+    { value: "5", label: "Live products shipped" },
 ];
 
 const TEXT_TRUNCATE_THRESHOLD = 220;
@@ -140,9 +140,8 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
         <motion.div
             variants={itemVariants}
             whileHover={{ y: -5 }}
-            className={`relative bg-gray-50 dark:bg-gray-800 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 ${
-                testimonial.highlight ? "ring-2 ring-blue-500/30" : ""
-            }`}
+            className={`relative bg-gray-50 dark:bg-gray-800 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 ${testimonial.highlight ? "ring-2 ring-blue-500/30" : ""
+                }`}
         >
             <span
                 className={`absolute top-4 right-4 px-2.5 py-0.5 rounded-full text-xs font-semibold ${getSourceBadgeClasses(testimonial.source)}`}
@@ -156,9 +155,8 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
 
             <div className="pr-16 mb-4">
                 <p
-                    className={`text-sm sm:text-base text-gray-600 dark:text-gray-300 ${
-                        !expanded && isLong ? "line-clamp-4" : ""
-                    }`}
+                    className={`text-sm sm:text-base text-gray-600 dark:text-gray-300 ${!expanded && isLong ? "line-clamp-4" : ""
+                        }`}
                 >
                     {testimonial.text}
                 </p>

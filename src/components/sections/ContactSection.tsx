@@ -78,13 +78,6 @@ const ContactSection = () => {
             description: "Connect with me professionally"
         },
         {
-            name: "WhatsApp",
-            icon: MessageCircle,
-            href: "https://wa.me/923016636557",
-            description: "Chat with me directly on WhatsApp",
-            eventName: 'whatsapp_click',
-        },
-        {
             name: "Email",
             icon: Mail,
             href: "mailto:m.waqar.ahmed@gmail.com",

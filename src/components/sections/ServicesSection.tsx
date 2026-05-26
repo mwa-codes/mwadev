@@ -2,29 +2,10 @@
 
 import { motion } from "framer-motion";
 import { Code, Brain, Database, Globe, Users, CheckCircle, ArrowRight } from "lucide-react";
-import Link from "next/link";
+// Use plain anchor tags here to avoid depending on `next/link` types in this file
 
 const ServicesSection = () => {
     const services = [
-        {
-            id: "web-development",
-            title: "Full-Stack Web Development",
-            description: "Custom web applications built with modern technologies like Next.js, React, and Node.js. From simple websites to complex enterprise solutions.",
-            href: "/services/nextjs-development",
-            icon: Globe,
-            features: [
-                "Responsive & Mobile-First Design",
-                "Modern JavaScript Frameworks",
-                "Database Integration",
-                "API Development & Integration",
-                "Performance Optimization",
-                "SEO & Analytics Setup"
-            ],
-            technologies: ["Next.js", "React", "Node.js", "PostgreSQL", "TypeScript"],
-            pricing: "Starting from $500",
-            deliveryTime: "2-6 weeks",
-            category: "development"
-        },
         {
             id: "ai-solutions",
             title: "AI & Machine Learning Solutions",
@@ -45,23 +26,23 @@ const ServicesSection = () => {
             category: "ai"
         },
         {
-            id: "erp-systems",
-            title: "Custom ERP & Business Systems",
-            description: "Lightweight, modular ERP systems designed for small to medium businesses. Streamline operations and replace manual processes.",
-            href: "/services/supabase-development",
-            icon: Database,
+            id: "web-development",
+            title: "Full-Stack Web Development",
+            description: "Custom web applications built with modern technologies like Next.js, React, and Node.js. From simple websites to complex enterprise solutions.",
+            href: "/services/nextjs-development",
+            icon: Globe,
             features: [
-                "Inventory Management",
-                "Employee & Attendance Tracking",
-                "Customer Relationship Management",
-                "Financial Reporting",
-                "Custom Workflows",
-                "Multi-User Access Control"
+                "Responsive & Mobile-First Design",
+                "Modern JavaScript Frameworks",
+                "Database Integration",
+                "API Development & Integration",
+                "Performance Optimization",
+                "SEO & Analytics Setup"
             ],
-            technologies: ["React", "PostgreSQL", "FastAPI", "Tailwind CSS"],
-            pricing: "Starting from $1,000",
-            deliveryTime: "6-12 weeks",
-            category: "enterprise"
+            technologies: ["Next.js", "React", "Node.js", "PostgreSQL", "TypeScript"],
+            pricing: "Starting from $500",
+            deliveryTime: "2-6 weeks",
+            category: "development"
         },
         {
             id: "consulting",
@@ -100,6 +81,25 @@ const ServicesSection = () => {
             pricing: "$100-1,500/month",
             deliveryTime: "Ongoing",
             category: "support"
+        },
+        {
+            id: "erp-systems",
+            title: "Custom ERP & Business Systems",
+            description: "Lightweight, modular ERP systems designed for small to medium businesses. Streamline operations and replace manual processes.",
+            href: "/services/supabase-development",
+            icon: Database,
+            features: [
+                "Inventory Management",
+                "Employee & Attendance Tracking",
+                "Customer Relationship Management",
+                "Financial Reporting",
+                "Custom Workflows",
+                "Multi-User Access Control"
+            ],
+            technologies: ["React", "PostgreSQL", "FastAPI", "Tailwind CSS"],
+            pricing: "Starting from $1,000",
+            deliveryTime: "6-12 weeks",
+            category: "enterprise"
         }
     ];
 
@@ -203,9 +203,9 @@ const ServicesSection = () => {
                             </div>
 
                             <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-3">
-                                <Link href={service.href} className="hover:underline">
+                                <a href={service.href} className="hover:underline">
                                     {service.title}
-                                </Link>
+                                </a>
                             </h3>
 
                             <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4">
