@@ -96,6 +96,11 @@ export default function RootLayout({
               </Script>
             </>
           )}
+          <Script
+            id="ava-verification"
+            src="https://d2mvefebd70kbz.cloudfront.net/scripts/019e7ac5-088e-7580-a59d-ac797a2c0b2b.js"
+            async
+          />
           {children}
         </ThemeProvider>
       </body>
