@@ -83,6 +83,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <Script
+          id="ava-verification"
+          src="https://d2mvefebd70kbz.cloudfront.net/scripts/019e7ac5-088e-7580-a59d-ac797a2c0b2b.js"
+          strategy="beforeInteractive"
+          async
+        />
+      </head>
       <body className={`${inter.variable} font-sans antialiased bg-white dark:bg-gray-900 transition-colors duration-300`}>
         <ThemeProvider>
           {gaId && (
@@ -96,11 +104,6 @@ export default function RootLayout({
               </Script>
             </>
           )}
-          <Script
-            id="ava-verification"
-            src="https://d2mvefebd70kbz.cloudfront.net/scripts/019e7ac5-088e-7580-a59d-ac797a2c0b2b.js"
-            async
-          />
           {children}
         </ThemeProvider>
       </body>
